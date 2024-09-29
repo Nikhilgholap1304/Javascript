@@ -27,10 +27,17 @@
 // console.log("not a number" / 2)
 // console.log( "not a number" / 2 - 1 ); // NaN
 
-console.log(1 + "2") //12
-console.log("1" + 2) //12
-console.log("1" + "2")
-console.log("1" + 2 + 3) //123
-console.log(1 + 2 + "3")
+// console.log(1 + "2") //12
+// console.log("1" + 2) //12
+// console.log("1" + "2")
+// console.log("1" + 2 + 3) //123
+// console.log(1 + 2 + "3")
+
+// console.log("hii")
+// setTimeout(() => {
+//   console.log("timeout")
+// },0);
+// console.log("bye")
+
 
 

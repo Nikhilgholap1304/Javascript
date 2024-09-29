@@ -1,0 +1,2 @@
+https://thecodest.co/blog/asynchronous-and-single-threaded-javascript-meet-the-event-loop/#:~:text=JavaScript%20is%20a%20single%2Dthreaded,to%20you%20how%20it%20happens.&text=JavaScript%20is%20an%20interpreted%20language%2C%20not%20a%20compiled%20one. 
+

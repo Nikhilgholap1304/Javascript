@@ -3,3 +3,8 @@ Concurrency means executing multiple tasks at the same time but not simultaneous
 Parallelism means performing two or more tasks simultaneously, e.g. performing multiple calculations at the same time.
 
 an item's lexical scope is the place in which the item got created
+
+//datatypes are based on memory allocation
+Primitive datatypes->  call by value (string,number,boolean,null,undefined,BigInt,symbol) ->Stack memory
+
+Reference/Non primitive data types -> call by reference ( array, object, function) -> heap memory

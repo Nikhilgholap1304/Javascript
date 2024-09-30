@@ -1,4 +1,5 @@
 // datatype: primitive datatype:
+// passed by values
 
 // nn bb ss u
 // Null-Number, Boolean-BigInt, String-Single, Undefined
@@ -70,5 +71,7 @@
 // let v = 100 - "str";
 // console.log(v);
 // console.log(typeof v);
+
+// non-primitve - passed by reference
 
 

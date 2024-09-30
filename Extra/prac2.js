@@ -1,3 +1,4 @@
+const prompt = require("prompt-sync")();
 const obj = {
   name: "nikhil",
   age: 20,
@@ -25,3 +26,6 @@ for (v in arr){
 }
 // in string
 //yellow o/p means number and white means its an string then
+
+get = prompt("Enter a number")
+console.log(get)

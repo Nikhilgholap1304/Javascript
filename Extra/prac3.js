@@ -31,7 +31,7 @@ console.log(n1, n2, n3)
 // const { a, b } = obj2;
 // console.log(a,b)
 
-let dupli = new String('Nikhil') //string is also internally an object
+let dupli = new String('Nikhil') //string is also internally an object,well its an sstring contructor
 // 0: "N"
 // 1: "i"
 // 2: "k"
@@ -39,3 +39,5 @@ let dupli = new String('Nikhil') //string is also internally an object
 // 4: "i"
 // 5: "l"
 console.log(dupli)
+
+// let dupli = String('Nikhil') //its just converting into string

@@ -41,3 +41,6 @@ let dupli = new String('Nikhil') //string is also internally an object,well its 
 console.log(dupli)
 
 // let dupli = String('Nikhil') //its just converting into string
+
+let sample = new String("Sample")
+console.log(sample.__proto__) //this is nothing but to get get the prototype of string in the form of objects

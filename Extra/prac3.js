@@ -2,7 +2,8 @@ let string = "IAmString"
 console.log(string[10]) //not throws an error instead it will return undefined
 
 let arr = [0, 1, 2, 3]
-console.log(arr[4]) //same
+console.log("arr", arr[4]) //same
+console.log("arr", arr[-1]) //negative indexing will not work
 
 let obj = {
   name1: 'nikhil',
@@ -42,5 +43,10 @@ console.log(dupli)
 
 // let dupli = String('Nikhil') //its just converting into string
 
-let sample = new String("Sample")
+let sample = "Characters"
 console.log(sample.__proto__) //this is nothing but to get get the prototype of string in the form of objects
+console.log(sample.length)
+console.log(sample.toLowerCase()) //Original value will not change instead it will just return the copy of it
+console.log(sample)
+console.log(sample.charAt(0))
+console.log(sample.indexOf('h'))

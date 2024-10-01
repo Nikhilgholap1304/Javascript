@@ -30,3 +30,12 @@ console.log(n1, n2, n3)
 // const obj2 = { a: 1, b: 2 };
 // const { a, b } = obj2;
 // console.log(a,b)
+
+let dupli = new String('Nikhil') //string is also internally an object
+// 0: "N"
+// 1: "i"
+// 2: "k"
+// 3: "h"
+// 4: "i"
+// 5: "l"
+console.log(dupli)

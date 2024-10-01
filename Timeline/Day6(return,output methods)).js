@@ -43,3 +43,4 @@ let parseInt = parseInt(age);
 console.log(parseAge);
 console.log(age)
 console.log(typeof age)
+

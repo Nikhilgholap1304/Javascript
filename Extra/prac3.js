@@ -43,10 +43,35 @@ console.log(dupli)
 
 // let dupli = String('Nikhil') //its just converting into string
 
-let sample = "Characters"
-console.log(sample.__proto__) //this is nothing but to get get the prototype of string in the form of objects
-console.log(sample.length)
-console.log(sample.toLowerCase()) //Original value will not change instead it will just return the copy of it
-console.log(sample)
-console.log(sample.charAt(0))
-console.log(sample.indexOf('h'))
+let sample1 = "Characters"
+console.log(sample1.__proto__) //this is nothing but to get get the prototype of string in the form of objects
+console.log(sample1.length)
+console.log(sample1.toLowerCase()) //Original value will not change instead it will just return the copy of it
+console.log(sample1)
+console.log(sample1.charAt(0))
+console.log(sample1.indexOf('h'))
+
+console.log(sample1.substring(0, 4)) 
+console.log(sample1.substring(-8, 4))//It will not take the negative values
+console.log(sample1.slice(-1)) //slice function can take negative values
+console.log(sample1.slice(-3,-1)) //but slice function must be in forward position or else it will return empty string if nothings there
+
+let sample2 = "           $Characters$                              "
+console.log(sample2)
+console.log(sample2.trim()) //returns the string with removed space
+console.log(sample2)
+console.log(sample2.replace('$','-')) //it will only replace one character
+console.log(sample2.includes('$')) //true
+
+let sample3 = "Hii you happy go lucky"
+console.log(sample3.split(' ')) //[ 'Hii', 'you', 'happy', 'go', 'lucky' ]
+
+let sample4 = "Hii-you-happy-go-lucky"
+console.log(sample4.split('-'))
+
+let sample5 = "Hii-you-happy-go-lucky"
+console.log(sample5.split('-', 3)) //with limiter, means only 3 items i.e [ 'Hii', 'you', 'happy' ]
+
+console.log(sample5.concat('-yummy','-moreyummy')) //from 1 to multiple strings we can pass
+
+

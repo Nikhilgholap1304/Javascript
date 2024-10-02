@@ -53,8 +53,13 @@ console.log(sample1.indexOf('h'))
 
 console.log(sample1.substring(0, 4)) 
 console.log(sample1.substring(-8, 4))//It will not take the negative values
-console.log(sample1.slice(-1)) //slice function can take negative values
+console.log(sample1.slice(-4)) //slice function can take negative values, if we specify single value it will consider the end index till end implicitly
 console.log(sample1.slice(-3,-1)) //but slice function must be in forward position or else it will return empty string if nothings there
+
+let samplex="Hii I'm Nikhil and I have ruppes 1000"
+console.log(samplex.slice("Hii I'm Nikhil and I have ruppes ".length))
+
+// samplex[0] = "B" //string is an immutable data type; it will not change, even though after doing this it will not throw any err
 
 let sample2 = "           $Characters$                              "
 console.log(sample2)

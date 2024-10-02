@@ -23,9 +23,16 @@ console.log(Math.random()) //It will always return the values from 0 to 1, e.g -
 console.log(Math.random()*100)
 console.log(parseInt(Math.random()*100))
 
-let num
-while (num !== 100) {
-  num = Math.ceil(Math.random()*100)
-  console.log(num)
-}
+// let num
+// while (num !== 100) {
+//   // num = Math.ceil(Math.random()*100)
+//   num = (Math.floor(Math.random()*100)+1)
+//   console.log(num)
+// }
 
+const min = 10
+const max = 20
+console.log(Math.floor(Math.random()*(max-min)+min)) // ((0-1)) * (10) +10
+                                                        //e.g 0.5*10 = 5+10 = 15
+
+                                                        

@@ -21,4 +21,11 @@
 
 console.log(Math.random()) //It will always return the values from 0 to 1, e.g - 0.2634664125577164
 console.log(Math.random()*100)
+console.log(parseInt(Math.random()*100))
+
+let num
+while (num !== 100) {
+  num = Math.ceil(Math.random()*100)
+  console.log(num)
+}
 

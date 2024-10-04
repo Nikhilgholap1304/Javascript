@@ -1,4 +1,4 @@
-// const myData = new Date()
+const myData = new Date()
 
 // console.log(myData.toString()) 
 // console.log(myData.toISOString()) //same
@@ -9,6 +9,7 @@
 // console.log(myData.getDate())
 // console.log(myData.getHours())
 // console.log(myData.getFullYear())
+// console.log(myData.getMonth()+1) //cuz month starts here with 0
 
 // let myCreatedDate = new Date(2024, 0, 13) //(year: number, monthIndex: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number) 
 //month index starts from 0

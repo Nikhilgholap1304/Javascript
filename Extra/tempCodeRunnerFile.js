@@ -1,2 +1,2 @@
-let arr = [0, 1, 2, 3]
-console.log("arr", arr[-1]) //same
+3") //14/1/2023, 12:00:00 am MM-DD-YYYY
+// console.log(myCreatedDate.toLocaleString())

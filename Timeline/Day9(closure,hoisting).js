@@ -25,7 +25,7 @@ let d = 40;
 
 console.log(a ,c , d);
 
-// !function hoisting: it will only work for named function, since if 
+// !function hoisting: it will only work for named function, since if other function we consider it would be inside the variable hence it would be rather a variable hoisting
 
 demo();
 

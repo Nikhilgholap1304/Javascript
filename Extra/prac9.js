@@ -3,6 +3,7 @@ dc = ["batman", "flash", "superman"]
 
 // marvel.push(dc) 
 // console.log(marvel) 
+// console.log(marvel[3][1])
 //[ 'spiderman', 'ironman', 'hulk', [ 'batman', 'flash', 'superman' ] ]
 // the whole array is getting pushed inside as a nested element
 

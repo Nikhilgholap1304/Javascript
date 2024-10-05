@@ -23,15 +23,37 @@
 // console.log(SuperHeros.includes('BatMan')) //true
 // console.log(SuperHeros.indexOf('Dr.Strange'))
 
-const numArray = [1,2,3,4,5] 
+// const numArray = [1,2,3,4,5] 
 
 // numArray.join() //its the exact opposite of split, and also it will not affect the original array, it will just return the outcome
 
 // const newArray = numArray.join()
-const newArray = numArray.join('-')
+// const newArray = numArray.join('-')
 
-console.log(newArray)
-console.log(typeof newArray)
+// console.log(newArray)
+// console.log(typeof newArray)
+
+const sliceArray = [1,2,3,4,5,6]
+
+const spliceArray = [1,2,3,4,5,6]
+
+sliceArray.slice(1,4) //slice will not alter the array infact it will return only sliced elements and also it will not count the last position element
+console.log(sliceArray)
+const a = sliceArray.slice(1,4)
+console.log(sliceArray)
+
+
+// spliceArray.splice(1,4) //Unlike slice it will remove or alter the elements of an array and returns the removed elements
+
+// console.log(spliceArray)
+
+spl = spliceArray.splice(1,4)
+console.log(spl) //removed elements can be seen
+console.log(spliceArray) //non - altered elements can be seen
+
+
+
+
 
 
 

@@ -15,7 +15,7 @@ console.log("New Array : ", [...marvel, ...dc])
 // console.log(marvel)
 
 marvel.concat()//alone it will not work or doesn't gets altered on original array
-console.log(marvel.concat(dc));
+console.log(marvel.concat(dc)); //it will return the concated array
 // let a = marvel.concat(dc);
 // console.log(a);
 //[ 'spiderman', 'ironman', 'hulk', 'batman', 'flash', 'superman' ]

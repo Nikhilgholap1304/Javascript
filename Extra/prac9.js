@@ -15,7 +15,7 @@ dc = ["batman", "flash", "superman"]
 
 // marvel.concat()//alone it will not work or doesn't gets altered
 let a = marvel.concat(dc);
-console.log(a); 
+console.log(a);
 //[ 'spiderman', 'ironman', 'hulk', 'batman', 'flash', 'superman' ]
 
 

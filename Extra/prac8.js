@@ -40,16 +40,16 @@ const spliceArray = [1,2,3,4,5,6]
 sliceArray.slice(1,4) //slice will not alter the array infact it will return only sliced elements and also it will not count the last position element
 console.log(sliceArray)
 const a = sliceArray.slice(1,4)
-console.log(sliceArray)
+console.log('last postion element is not present',a)
 
 
-// spliceArray.splice(1,4) //Unlike slice it will remove or alter the elements of an array and returns the removed elements
+// spliceArray.splice(1,4) //Unlike slice it will remove or alter the elements of an array and returns the removed elements, it will also count the last position element
 
 // console.log(spliceArray)
 
 spl = spliceArray.splice(1,4)
-console.log(spl) //removed elements can be seen
-console.log(spliceArray) //non - altered elements can be seen
+console.log("last postion element is present which all be removed - ",spl) //removed elements can be seen
+console.log("org array",spliceArray) //non - altered elements can be seen
 
 
 

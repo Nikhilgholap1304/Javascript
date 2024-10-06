@@ -32,6 +32,13 @@ dc = ["batman", "flash", "superman"]
 //   3, 1, 5, 2
 // ]
 
+// delete dc //delete is an operator used to delete any variable
+// console.log(dc) //ReferenceError: dc is not defined
+
+// score = 100
+// delete score //it deletes anything
+// console.log(score) //ReferenceError: score is not defined 
+
 
 console.log(Array('HII','HELLO')) //[ 'HII', 'HELLO' ] array can contain only one element
 console.log(Array.isArray('Gojo')) //false

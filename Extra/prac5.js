@@ -27,7 +27,7 @@
   //   console.log("callback function")
   // })
   
-  //therefore callback functions are used to execute asynchronously as well as if we want to handle the async functions like settimeout
+  //therefore callback functions are used to execute syncronously
 
   
   // const Outerfunction = (callbackfun) => {
@@ -38,9 +38,9 @@
   // }
 
   // Outerfunction(()=>{
-  //   console.log("callback functions bye")
+  //   console.log("callback function")
   // })
 
   //as you can see setTimeout will not stop the the execution , therefore callback will run first and outerfunctions clg will run after wards
 
-  // thats why for achieving the synchronous nature while having the asynchronous funciton we use promises
+  // thats why for achieving the synchronous nature while having the asynchronous function we use promises

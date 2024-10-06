@@ -39,3 +39,20 @@ console.log(Array.isArray(marvel)) //true
 // for converting or the way to split a string into array of characters
 
 console.log(Array.from('Gojo')) //[ 'G', 'o', 'j', 'o' ]
+
+console.log(Array.from(20)) //[]
+// console.log(Array.from(20,30)) //[] TypeError: 30 is not a function
+
+console.log(Array.from({name: 'Nikhil'})) //[] //IMP
+//other than string it cannot convert anything
+
+let num1 = 100
+let num2 = 200
+let num3 = 300
+
+console.log(Array.of(num1)) //[100]
+console.log(Array.of(num1,num2,num3)) //[ 100, 200, 300 ] returns the converted set of elements to array
+
+
+
+

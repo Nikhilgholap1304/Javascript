@@ -1,4 +1,4 @@
-const myData = new Date()
+const myData = new Date() //date constructor
 
 // console.log(myData.toString()) 
 // console.log(myData.toISOString()) //same

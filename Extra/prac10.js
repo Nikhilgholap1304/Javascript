@@ -44,15 +44,35 @@ let items = [10,20,30,40]
 // 2 30
 // 3 40
 
-items.map((item, index, array)=>{
-  console.log(item, index, array)
-})
+// items.map((item, index, array)=>{
+//   console.log(item, index, array)
+// })
 
 // 10 0 [ 10, 20, 30, 40 ]
 // 20 1 [ 10, 20, 30, 40 ]
 // 30 2 [ 10, 20, 30, 40 ]
 // 40 3 [ 10, 20, 30, 40 ]
-//but whats the variation
+//but whats the variation btw forEach, forEach just loops through which cannot return anything however map returns the array in which same set of operations are done
+
+// const newArr = items.map((item)=>{});
+// console.log(newArr)
+
+// [ undefined, undefined, undefined, undefined ]
+//since its returning void implicitly
+
+
+const newArr = items.map((item)=>{
+  return item+1
+});
+
+console.log(newArr)
+// [ 11, 21, 31, 41 ]
+
+
+
+
+
+
 
 
 

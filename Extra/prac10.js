@@ -20,3 +20,17 @@ for(i in items){ //this i.e for in loop returns the keys of an object (array)
   console.log(i)
 }
 
+for(v of items){ //this i.e for of loop returns the values of an object (array)
+  console.log(v)
+}
+
+for([i,v] of Object.entries(items)){
+  console.log(i,v)
+}
+// 0 10
+// 1 20
+// 2 30
+// 3 40
+
+
+

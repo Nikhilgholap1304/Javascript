@@ -24,7 +24,7 @@ for(v of items){ //this i.e for of loop returns the values of an object (array)
   console.log(v)
 }
 
-for([i,v] of Object.entries(items)){
+for([i,v] of Object.entries(items)){ //siince array is also an object
   console.log(i,v)
 }
 // 0 10

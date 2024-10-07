@@ -70,7 +70,7 @@ let items = [10,20,30,40]
 
 //manual map function
 
-// class Arr{
+// class Arr{ //userdefined datatype or user defined arr and the map funntion
 //   constructor(...elements){ //or (elements) if its directly an array
 //     this.elements = elements
 //   }

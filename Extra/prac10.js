@@ -92,7 +92,7 @@ let items = [10,20,30,40]
 // console.log(newEle) //[ 11, 21, 31, 41 ]
 
 const [...packing] = [10,20,30]
-const [a,b,c] = [...packing]
+const [a,b,c] = packing //or [...packing]
 console.log(packing)
 console.log(a,b,c)
 

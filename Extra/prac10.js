@@ -70,26 +70,31 @@ let items = [10,20,30,40]
 
 //manual map function
 
-class Arr{
-  constructor(...elements){ //or (elements) if its directly an array
-    this.elements = elements
-  }
-  map(callback){
-    this.newArr = []
-    for(let ele of this.elements){
-      // console.log("working", ele)
-      this.newArr.push(callback(ele))
-    }
-    return this.newArr
-  }
-}
+// class Arr{
+//   constructor(...elements){ //or (elements) if its directly an array
+//     this.elements = elements
+//   }
+//   map(callback){
+//     this.newArr = []
+//     for(let ele of this.elements){
+//       // console.log("working", ele)
+//       this.newArr.push(callback(ele))
+//     }
+//     return this.newArr
+//   }
+// }
 
-const obj1 = new Arr(10,20,30,40)
+// const obj1 = new Arr(10,20,30,40)
 
-const newEle = obj1.map((ele)=>{
-  return ele+1
-})
-console.log(newEle) //[ 11, 21, 31, 41 ]
+// const newEle = obj1.map((ele)=>{
+//   return ele+1
+// })
+// console.log(newEle) //[ 11, 21, 31, 41 ]
+
+const [...packing] = [10,20,30]
+const [a,b,c] = [...packing]
+console.log(packing)
+console.log(a,b,c)
 
 
 

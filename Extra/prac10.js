@@ -9,6 +9,7 @@ let items = [10,20,30,40]
 // items.forEach((item, i, items)=>{ //takes upto 3 parameters - 1)item 2)index 3)whole array
 // console.log(item, i, items)
 // });
+
 //it executes the callback function one time for each element and does the operation
 
 // 10 0 [ 10, 20, 30, 40 ]
@@ -16,21 +17,44 @@ let items = [10,20,30,40]
 // 30 2 [ 10, 20, 30, 40 ]
 // 40 3 [ 10, 20, 30, 40 ]
 
-for(i in items){ //this i.e for in loop returns the keys of an object (array)
-  console.log(i)
-}
+// for(i in items){ //this i.e for in loop returns the keys of an object (array)
+//   console.log(i)
+// }
 
-for(v of items){ //this i.e for of loop returns the values of an object (array)
-  console.log(v)
-}
+// const obj = {
+//   a: 1,
+//   b: 2
+// } 
+// for(ele of obj){ //TypeError: obj is not iterable
+//   console.log(ele)
+// }
 
-for([i,v] of Object.entries(items)){ //siince array is also an object
-  console.log(i,v)
-}
+// let chrs = "string"
+// for([i,v] of Object.entries(chrs)){ //since array is also an object
+//   console.log(i,v)
+// }
+// for([i,v] of Object.entries(items)){ //since array is also an object
+//   console.log(i,v)
+//   // console.log(typeof i) //string
+// }
+
+// op:-
 // 0 10
 // 1 20
 // 2 30
 // 3 40
+
+items.map((item, index, array)=>{
+  console.log(item, index, array)
+})
+
+// 10 0 [ 10, 20, 30, 40 ]
+// 20 1 [ 10, 20, 30, 40 ]
+// 30 2 [ 10, 20, 30, 40 ]
+// 40 3 [ 10, 20, 30, 40 ]
+//but whats the variation
+
+
 
 
 

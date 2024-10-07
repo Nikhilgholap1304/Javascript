@@ -1,3 +1,5 @@
-r(let i = 0; i < items.length; i++){
-//   console.log(items[i])
-// }
+wArr = items.map((item)=>{
+//   return item+1
+// });
+
+// console.log(newArr)

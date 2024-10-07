@@ -61,12 +61,35 @@ let items = [10,20,30,40]
 //since its returning void implicitly
 
 
-const newArr = items.map((item)=>{
-  return item+1
-});
+// const newArr = items.map((item)=>{
+//   return item+1
+// });
 
-console.log(newArr)
-// [ 11, 21, 31, 41 ]
+// console.log(newArr)
+// [ 11, 21, 31, 41 ] after adding one to using callback back for each element
+
+//manual map function
+
+class Arr{
+  constructor(...elements){ //or (elements) if its directly an array
+    this.elements = elements
+  }
+  map(callback){
+    this.newArr = []
+    for(let ele of this.elements){
+      // console.log("working", ele)
+      this.newArr.push(callback(ele))
+    }
+    return this.newArr
+  }
+}
+
+const obj1 = new Arr(10,20,30,40)
+
+const newEle = obj1.map((ele)=>{
+  return ele+1
+})
+console.log(newEle) //[ 11, 21, 31, 41 ]
 
 
 

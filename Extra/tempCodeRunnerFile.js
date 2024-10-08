@@ -1,5 +1,5 @@
-wArr = items.map((item)=>{
-//   return item+1
-// });
+st newArr2 = arr1.reduce((prev, curr)=>{ //user-defined reduce function
+//   return prev*curr
+// })
 
-// console.log(newArr)
+// console.log(newArr2)

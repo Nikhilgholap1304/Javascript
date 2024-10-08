@@ -60,6 +60,19 @@ let num3 = 300
 console.log(Array.of(num1)) //[100]
 console.log(Array.of(num1,num2,num3)) //[ 100, 200, 300 ] returns the converted set of elements to array
 
+marvel.sort()
+console.log(marvel)
+
+const scores = [2,6,1,5,7,4]
+scores.sort((a,b)=>b-a)
+console.log(scores) //[ 7, 6, 5, 4, 2, 1 ]
+scores.sort()
+console.log(scores) //[ 1, 2, 4, 5, 6, 7 ]
+
+marvel.reverse()
+console.log(marvel) //[ 'spiderman', 'ironman', 'hulk' ]
+
+
 
 
 

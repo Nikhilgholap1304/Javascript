@@ -67,7 +67,7 @@ console.log(Object.hasOwn(obj5, 'z')) //false
 // const {val1, val2} = { a: 5, b: 6 } //It won't work since its not matching the keys
 // console.log(val1, val2) //undefined undefined
 
-const { a, b } = { a: 5, b: 6 }
+const { a, b } = { a: 5, b: 6 } //by mentioning the keys we will get the values
 console.log(a, b)
 
 const { a: name1, b: name2 } = { a: 5, b: 6 } //also you can name it differently

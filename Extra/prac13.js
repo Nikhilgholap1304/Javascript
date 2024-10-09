@@ -68,10 +68,10 @@ console.log(Object.hasOwn(obj5, 'z')) //false
 // console.log(val1, val2) //undefined undefined
 
 const { a, b } = { a: 5, b: 6 }
-console.log(a,b)
+console.log(a, b)
 
-const { a:name1, b:name2 } = { a: 5, b: 6 } //also you can name it differently
-console.log(name1,name2)
+const { a: name1, b: name2 } = { a: 5, b: 6 } //also you can name it differently
+console.log(name1, name2)
 
 
 

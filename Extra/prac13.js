@@ -60,3 +60,19 @@ console.log(Object.values(obj5))
 console.log(Object.hasOwn(obj5, 'a')) //true 
 //its returns boolean value based on if property is present or not
 console.log(Object.hasOwn(obj5, 'z')) //false
+
+
+
+//? Destructuring of object
+// const {val1, val2} = { a: 5, b: 6 } //It won't work since its not matching the keys
+// console.log(val1, val2) //undefined undefined
+
+const { a, b } = { a: 5, b: 6 }
+console.log(a,b)
+
+const { a:name1, b:name2 } = { a: 5, b: 6 } //also you can name it differently
+console.log(name1,name2)
+
+
+
+

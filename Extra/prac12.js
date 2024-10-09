@@ -16,10 +16,13 @@ const User = {
 }
 
 console.log(User.name)
-// console.log(User.full name) //not possible; thats why .operator is not preferred
+// console.log(User.full name) //not possible; thats why .operator or (.notation) is not preferred
 
 //instead use the brackets to call it
 console.log(User["full name"])
+
+console.log(User[mySym]) //[Symbol(mykey)]: 'thisisvalueofkey' only way to access the symbol key
+// console.log(User.mySym) //undefined //won't work
 
 
 

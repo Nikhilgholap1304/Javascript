@@ -21,9 +21,9 @@ const User = {
   email: "nikhilgholap1304@gmail.com",
   isLoggedIn: false,
   lastLoginDays: ["Monday", "Saturday"],
-  greet: ()=>{
+  greet: () => {
     // return `Hello World ${name}` //Hello World Ayush
-    //Its accessing the global variable instead of the key (name) of User object
+    // Its accessing the global variable instead of the key (name) of User object
     // return `Hello World ${User.name}` //Hello World Nikhil
     return `Hello World ${this.age}` //Hello World Nikhil //this defines the Object name or class name incase of classes
   }
@@ -57,6 +57,9 @@ const User = {
 // console.log(Object.isFrozen(User)) //true
 // console.log(Object.isSealed()) //true
 // console.log(Object.is(User, User))// it will return if both the values are same
+console.log(Object.fromEntries(
+  [['num1', 1], ['num2', 2]])
+)
 
 console.log(User.greet) //It will provide the function reference
 console.log(User.greet()) //Hello World

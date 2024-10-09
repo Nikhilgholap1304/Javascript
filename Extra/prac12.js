@@ -11,6 +11,7 @@ const str = "key"
 
 let name = "Ayush"
 
+//if the keys are duplicate redundant then that key will override the previous key
 const User = {
   name: "Nikhil",
   "full name": "Nikhil Gholap",

@@ -25,4 +25,4 @@ console.log(User["full name"])
 
 console.log(User.key)    //this is string 
 console.log(User["key"]) //this is string
-console.log(User[str])   //this is string //using the variable
+console.log(User[str])   //this is string //using the variable name

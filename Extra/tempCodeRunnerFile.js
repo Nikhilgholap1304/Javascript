@@ -1,5 +1,4 @@
-st newArr2 = arr1.reduce((prev, curr)=>{ //user-defined reduce function
-//   return prev*curr
-// })
-
-// console.log(newArr2)
+onst newArr2 = arr1.reduce((prevVal, currVal, currIndex, arr)=>{ //user-defined reduce function
+  // console.log(currIndex, arr)
+  return prevVal*currVal
+})

@@ -12,34 +12,40 @@ const User = {
   location: "Mumbai",
   email: "nikhilgholap1304@gmail.com",
   isLoggedIn: false,
-  lastLoginDays: ["Monday", "Saturday"]
+  lastLoginDays: ["Monday", "Saturday"],
+  greet: ()=>{
+    return "Hello World"
+  }
 }
 
-console.log(User.name)
+// console.log(User.name)
 // console.log(User.full name) //not possible; thats why .operator or (.notation) is not preferred
 
 //instead use the brackets to call it
-console.log(User["full name"])
+// console.log(User["full name"])
 
-console.log(User[mySym]) //[Symbol(mykey)]: 'thisisvalueofkey' only way to access the symbol key
+// console.log(User[mySym]) //[Symbol(mykey)]: 'thisisvalueofkey' only way to access the symbol key
 // console.log(User.mySym) //undefined //won't work
 
 
 //for normal variable as a key
-console.log(User.key)    //this is string 
-console.log(User["key"]) //this is string
-console.log(User[str])   //this is string //using the variable name
+// console.log(User.key)    //this is string 
+// console.log(User["key"]) //this is string
+// console.log(User[str])   //this is string //using the variable name
 
-User["name"] = "Nivas"
-// User.name = "Nivas"
-console.log(User.name) //"Nivas"
+// User["name"] = "Nivas"
+// // User.name = "Nivas"
+// console.log(User.name) //"Nivas"
 
 //but if we don't want the user to modify the object then use
 
-Object.freeze(User)
-Object.seal(User)
-User.name = "Ayush" //it wont change since its been freezed or immutable
-console.log(User.name)
-console.log(Object.isFrozen(User)) //true
-console.log(Object.isSealed()) //true
-console.log(Object.is(User, User))// it will return if both the values are same
+// Object.freeze(User)
+// Object.seal(User)
+// User.name = "Ayush" //it wont change since its been freezed or immutable
+// console.log(User.name)
+// console.log(Object.isFrozen(User)) //true
+// console.log(Object.isSealed()) //true
+// console.log(Object.is(User, User))// it will return if both the values are same
+
+console.log(User.greet) //we will get the function reference
+console.log(User.greet())

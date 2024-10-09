@@ -1,7 +1,15 @@
 // Objects
+// to create an object
+// literal way 
+// obj = {}
+// constructor way
+// const obj = new Object({a:10,b:20})
+// console.log(obj)
 
 const mySym = Symbol("mykey");
 const str = "key"
+
+let name = "Ayush"
 
 const User = {
   name: "Nikhil",
@@ -14,7 +22,10 @@ const User = {
   isLoggedIn: false,
   lastLoginDays: ["Monday", "Saturday"],
   greet: ()=>{
-    return "Hello World"
+    // return `Hello World ${name}` //Hello World Ayush
+    //Its accessing the global variable instead of the key (name) of User object
+    // return `Hello World ${User.name}` //Hello World Nikhil
+    return `Hello World ${this.age}` //Hello World Nikhil //this defines the Object name or class name incase of classes
   }
 }
 
@@ -47,5 +58,9 @@ const User = {
 // console.log(Object.isSealed()) //true
 // console.log(Object.is(User, User))// it will return if both the values are same
 
-console.log(User.greet) //we will get the function reference
-console.log(User.greet())
+console.log(User.greet) //It will provide the function reference
+console.log(User.greet()) //Hello World
+
+
+
+

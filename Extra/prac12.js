@@ -25,7 +25,21 @@ console.log(User[mySym]) //[Symbol(mykey)]: 'thisisvalueofkey' only way to acces
 // console.log(User.mySym) //undefined //won't work
 
 
-
+//for normal variable as a key
 console.log(User.key)    //this is string 
 console.log(User["key"]) //this is string
 console.log(User[str])   //this is string //using the variable name
+
+User["name"] = "Nivas"
+// User.name = "Nivas"
+console.log(User.name) //"Nivas"
+
+//but if we don't want the user to modify the object then use
+
+Object.freeze(User)
+Object.seal(User)
+User.name = "Ayush" //it wont change since its been freezed or immutable
+console.log(User.name)
+console.log(Object.isFrozen(User)) //true
+console.log(Object.isSealed()) //true
+console.log(Object.is(User, User))// it will return if both the values are same

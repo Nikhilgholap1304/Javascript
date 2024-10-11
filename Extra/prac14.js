@@ -20,20 +20,20 @@ console.table({ a: 1, b: 2, c: 3 })
 let store = () => {
   console.log("Statement")
 }
-console.time(store())
-console.timeEnd(store())
+// console.time(store())
+// console.timeEnd(store())
 
 // Statement
 // Statement
 // default: 0.349ms
 
-console.time(store())
+console.time()
 
 for(let i=0; i<10; i++){
   console.log(i)
 }
 
-console.timeEnd(store())
+console.timeEnd()
 
 
 

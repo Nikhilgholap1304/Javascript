@@ -1,3 +1,2 @@
-
-// Statement
-// default: 0.349ms
+tore())
+// console.timeEnd(store())

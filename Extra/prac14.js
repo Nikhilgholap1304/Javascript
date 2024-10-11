@@ -17,5 +17,17 @@ console.table({ a: 1, b: 2, c: 3 })
 // │    c    │   3    │
 // └─────────┴────────┘
 
+let store = () => {
+  console.log("Statement")
+}
+console.time(store())
+console.timeEnd(store())
+
+
+
+// Statement
+// Statement
+// default: 0.349ms
+
 
 

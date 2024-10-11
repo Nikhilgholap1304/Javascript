@@ -1,4 +1,3 @@
-const navbar = ({ company, rate }) => { //destructuring of object
-//   console.log(company)
-//   console.log(rate)
-// }
+
+// Statement
+// default: 0.349ms

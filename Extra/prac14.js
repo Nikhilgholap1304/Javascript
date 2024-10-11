@@ -23,11 +23,15 @@ let store = () => {
 console.time(store())
 console.timeEnd(store())
 
-
-
 // Statement
 // Statement
 // default: 0.349ms
+
+console.time(store())
+for(let i=0; i<10; i++){
+  console.log(i)
+}
+console.timeEnd(store())
 
 
 

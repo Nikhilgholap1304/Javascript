@@ -8,3 +8,14 @@ console.assert(2 > 3, "Its an asertion error message") //Assertion failed: Its a
 console.warn("Its an warning")
 
 console.table({ a: 1, b: 2, c: 3 })
+
+// ┌─────────┬────────┐
+// │ (index) │ Values │
+// ├─────────┼────────┤
+// │    a    │   1    │
+// │    b    │   2    │
+// │    c    │   3    │
+// └─────────┴────────┘
+
+
+

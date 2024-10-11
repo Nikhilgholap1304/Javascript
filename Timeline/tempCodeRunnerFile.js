@@ -1,4 +1,6 @@
-((a, b) => {
-    console.log("IIFE")
-    console.log(a, b)
-  })(a, b)
+ = ar.findIndex(function(m,i,a){
+  // console.log(m);
+  return m > 96;
+});
+
+console.log(r2);

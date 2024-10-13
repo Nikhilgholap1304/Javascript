@@ -1,16 +1,9 @@
-const day = 2
-// switch (day) {
-//   case 1:
-//     console.log(day)
-//     break;
-//   case 2:
-//     console.log("case 2")
-//     // break;
-//   case 3:
-//     console.log("case 3")
-//     // break;
+let name = "Nikhil"
 
-//   default:
-//     console.log("default")
-//     break;
+// const demo = () => {
+//   console.log(name)
+//   // var name = "Ayush" //undefined while console logging
+//   // let name = "Ayush" //Cannot access 'name' before initialization
+//   const name = "Ayush" //Cannot access 'name' before initialization
 // }
+// demo()

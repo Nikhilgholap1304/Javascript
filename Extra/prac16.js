@@ -33,16 +33,29 @@
 
 //If break is not given then the code will execute all the way from matched case till it doesn't come across the break statement or end of switch case
 
-let name = "Nikhil"
+// let name = "Nikhil"
 
-const demo = () => {
-  console.log(name)
-  // var name = "Ayush" //undefined while console logging
-  // let name = "Ayush" //Cannot access 'name' before initialization
-  const name = "Ayush" //Cannot access 'name' before initialization
-}
-demo()
+// const demo = () => {
+//   console.log(name)
+//   // var name = "Ayush" //undefined while console logging
+//   // let name = "Ayush" //Cannot access 'name' before initialization
+//   const name = "Ayush" //Cannot access 'name' before initialization
+// }
+// demo()
 
 //Cannot access 'name' before initialization
+
+// truthy values - "0", 'false', " ", [], {}, function(){}
+
+const arr = []
+const obj = {}
+
+if(arr.length === 0){
+  console.log("array Its empty")
+}
+
+if(Object.keys(obj).length === 0){
+  console.log("object Its empty")
+}
 
 

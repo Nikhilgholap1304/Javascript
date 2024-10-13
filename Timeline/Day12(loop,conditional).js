@@ -56,7 +56,7 @@ if (num > 9) {
 
 var number = 3;
 
-//switch case
+//switch case ---- Decisional Statement
 switch (number) {
   case 1: {
     console.log("Number is 1");

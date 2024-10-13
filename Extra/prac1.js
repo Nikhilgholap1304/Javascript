@@ -39,5 +39,19 @@
 // },0);
 // console.log("bye")
 
+if (8 == '8') { //true that they are equal
+  console.log("They are equal")
+}
+if (!(8 === '8')) { //true that they are not equal //strict checking
+  console.log("Now they are not equal")
+}
+
+if (8 == '8') console.log("They are equal"); //implicit scope
+
+if (8 == '8') console.log("They are equal"), console.log("This is another statement"); //to execute multiple statements in terms of implicit scope 
+
+// They are equal
+// This is another statement
+
 
 

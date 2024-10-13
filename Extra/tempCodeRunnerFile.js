@@ -1,2 +1,1 @@
-tore())
-// console.timeEnd(store())
+default

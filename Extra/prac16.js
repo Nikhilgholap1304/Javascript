@@ -14,21 +14,35 @@
 
 //switch case
 
-const day = 2
-switch (day) {
-  case 1:
-    console.log(day)
-    break;
-  case 2:
-    console.log("case 2")
-    // break;
-  case 3:
-    console.log("case 3")
-    break;
+// const day = 2
+// switch (day) {
+//   case 1:
+//     console.log(day)
+//     break;
+//   case 2:
+//     console.log("case 2")
+//     // break;
+//   case 3:
+//     console.log("case 3")
+//     // break;
 
-  default:
-    console.log("default")
-    break;
+//   default:
+//     console.log("default")
+//     break;
+// }
+
+//If break is not given then the code will execute all the way from matched case till it doesn't come across the break statement or end of switch case
+
+let name = "Nikhil"
+
+const demo = () => {
+  console.log(name)
+  // var name = "Ayush" //undefined while console logging
+  // let name = "Ayush" //Cannot access 'name' before initialization
+  const name = "Ayush" //Cannot access 'name' before initialization
 }
+demo()
+
+//Cannot access 'name' before initialization
 
 

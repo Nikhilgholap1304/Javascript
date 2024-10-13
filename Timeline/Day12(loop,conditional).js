@@ -54,6 +54,20 @@ if (num > 9) {
   console.log("num is less than 9");
 }
 
+if (8 == '8') { //true that they are equal
+  console.log("They are equal")
+}
+if (!(8 === '8')) { //true that they are not equal //strict checking
+  console.log("Now they are not equal")
+}
+
+if (8 == '8') console.log("They are equal"); //implicit scope
+
+if (8 == '8') console.log("They are equal"), console.log("This is another statement");
+
+// They are equal
+// This is another statement
+
 var number = 3;
 
 //switch case ---- Decisional Statement
@@ -85,7 +99,7 @@ console.log(2 > 3 ? "true" : "false")
 
 // Examples for loops
 
-let ar = [10,20,30,40,50,60,11,24,27]
+let ar = [10, 20, 30, 40, 50, 60, 11, 24, 27]
 //let newAr = []
 
 //for (let val of ar){
@@ -97,8 +111,8 @@ let ar = [10,20,30,40,50,60,11,24,27]
 console.log(newAr)
 
 let firstEle;
-for (v of ar){
-  if(v>25){
+for (v of ar) {
+  if (v > 25) {
     firstEle = v;
     break; //to satisfy first condition
   }

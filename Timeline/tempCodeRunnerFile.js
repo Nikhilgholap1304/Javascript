@@ -1,6 +1,1 @@
- = ar.findIndex(function(m,i,a){
-  // console.log(m);
-  return m > 96;
-});
-
-console.log(r2);
+if (8 == '8') console.log("They are equal"), console.log("This is another statement");

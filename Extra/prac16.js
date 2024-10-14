@@ -47,15 +47,33 @@
 
 // truthy values - "0", 'false', " ", [], {}, function(){}
 
-const arr = []
-const obj = {}
+// const arr = []
+// const obj = {}
 
-if(arr.length === 0){
-  console.log("array Its empty")
-}
+// if(arr.length === 0){
+//   console.log("array Its empty")
+// }
 
-if(Object.keys(obj).length === 0){
-  console.log("object Its empty")
-}
+// if(Object.keys(obj).length === 0){
+//   console.log("object Its empty")
+// }
+
+//Nullish Coalescing operator (??): null undefined
+
+let val1;
+val1 = 5 ?? 10 //if it neither null nor undefined then it will assign first value otherwise second
+
+val2 = null ?? 10
+
+val3 = null ?? null ?? 10 ?? 20 //selects the first values otherthan null or undefined
+
+console.log(val1)  //5
+console.log(val2)  //10
+console.log(val3)  //10
+
+//Terniary Operator
+
+const iceTea = 100
+console.log(iceTea > 100 ? "Costly": "Cheap") //Cheap
 
 

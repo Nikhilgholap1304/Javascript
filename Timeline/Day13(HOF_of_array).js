@@ -38,14 +38,14 @@ let ar = [10,30,50,70,100,68,96];
 // console.log(r4)
 // console.log(ar)
 
-// //! some():
+// //! some(): //if even one element satisfies the condition then it will stop right there and returns true at the end otherwise it returns false... at the end
 // let r5 = ar.some((m,i,a)=>{
 //   return a > 600
 // })
 // console.log(r5)
 
-// //! every():
-// let r6 = ar.every((m,i,a)=>{
-//   return a > 4;
-// })
-// console.log(r6);
+// //! every(): //if every element satisfies the condition then it returns true at the end as well otherwise if it come across even one false value it stops and returns false at the end
+let r6 = ar.every((m,i,a)=>{
+  return a > 4;
+})
+console.log(r6);

@@ -58,3 +58,15 @@ After the creation phase completed, the execution phase begins where actual valu
 1. Memory phase 
 2. Execution phase 
 📝The return value of the 'Function Execution' context is passed to the Global Execution Context
+
+
+
+/Nullish Coalescing operator (??): null undefined
+
+let val1;
+val1 = 5 ?? 10 //if it neither null nor undefined then it will assign first value otherwise second
+
+val2 = null ?? 10
+
+console.log(val1)  //5
+console.log(val2)  //10

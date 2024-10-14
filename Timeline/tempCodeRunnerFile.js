@@ -1,1 +1,4 @@
-if (8 == '8') console.log("They are equal"), console.log("This is another statement");
+let r6 = ar.every((m,i,a)=>{
+  return a > 4;
+})
+console.log(r6);

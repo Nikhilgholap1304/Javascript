@@ -8,17 +8,18 @@ map.set("USA", "United States of America")
 map.set(true, "France")
 map.set([1,2,3], "France")
 
-console.log(map.keys()) 
-// [Map Iterator] { 1, 'USA', true, [ 1, 2, 3 ] }
+// console.log(map.keys()) 
+// // [Map Iterator] { 1, 'USA', true, [ 1, 2, 3 ] }
 
-for (let element of map.keys()) {
-  console.log(element, typeof element)
-}
+// for (let element of map.keys()) {
+//   console.log(element, typeof element)
+// }
 
-// 1 : India
-// USA : United States of America
-// true : France
-// [ 1, 2, 3 ] : France
+// 1 number
+// USA string
+// true boolean
+// [ 1, 2, 3 ] object
+
 
 // for (const e of map) { //its similar to Object.entries().... 
 //   // whole key and value pairs would be as value/element inside the map
@@ -35,3 +36,5 @@ for (let element of map.keys()) {
 // for (const key in map) {
 //   console.log(key) //this will not work, it cannot be iterated
 // }
+
+console.log(map.delete('USA'))

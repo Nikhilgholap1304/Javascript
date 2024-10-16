@@ -19,6 +19,7 @@ console.log(s.toUpperCase());
 //HELLO
 console.log(r.toLowerCase());
 //react
+console.log(str1)
 
 ///Objects-------------------------------------------
 

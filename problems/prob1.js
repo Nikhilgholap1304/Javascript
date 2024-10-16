@@ -2,18 +2,18 @@
 const prompt = require("prompt-sync")();
 
 // let set = [5, 2, 7, 4, 1, 9]
-let set = [23, 68, 17, 57, 18, 72]
 // const n = parseInt(prompt(`Enter the index position to pick from ${set} - `))
-const n = 57
 //its by default in the string therefore converting into the integer
 
 // console.log(set.includes(n))
-if (!set.includes(n)) {
-  throw new Error("Number is not present");
-}
 
 const getClosest = (nValue, set) => {
+
   let closestVal;
+
+  if (!set.includes(n)) {
+    throw new Error("Number is not present");
+  }
 
   set.sort((a, b) => a - b);
   console.log(set)
@@ -36,5 +36,8 @@ const getClosest = (nValue, set) => {
 }
 
 
-console.log(getClosest(68, set))
+let set = [23, 68, 17, 57, 18, 72]
+const nValue = 68
+
+console.log(getClosest(nValue, set))
 

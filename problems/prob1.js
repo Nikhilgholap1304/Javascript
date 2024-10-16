@@ -1,4 +1,5 @@
 //to find the closest number of n number from a set without using loop
+
 const prompt = require("prompt-sync")();
 
 // let set = [5, 2, 7, 4, 1, 9]

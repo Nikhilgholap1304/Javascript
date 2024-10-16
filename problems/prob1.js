@@ -11,7 +11,7 @@ const getClosest = (nValue, set) => {
 
   let closestVal;
 
-  if (!set.includes(n)) {
+  if (!set.includes(nValue)) {
     throw new Error("Number is not present");
   }
 

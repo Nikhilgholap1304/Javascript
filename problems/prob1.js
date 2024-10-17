@@ -21,14 +21,20 @@ const getClosest = (nValue, set) => {
   const nIndex = set.indexOf(nValue)
   console.log(nIndex)
   
-  if (set[nIndex + 1] > set[nIndex - 1]) {
-    closestVal = set[nIndex + 1]
-  } else if (!set[nIndex - 1]) {
-    closestVal = set[nIndex + 1]
-  } else if (!set[nIndex + 1]) {
-    closestVal = set[nIndex - 1]
+  // if (set[nIndex + 1] > set[nIndex - 1]) {
+  //   closestVal = set[nIndex + 1]
+  // } else if (!set[nIndex - 1]) {
+  //   closestVal = set[nIndex + 1]
+  // } else if (!set[nIndex + 1]) {
+  //   closestVal = set[nIndex - 1]
+  // } else {
+  //   closestVal = set[nIndex + 1]
+  // } //thats why only next position had been getting selected
+
+  if(set[nIndex]-set[nIndex-1] < set[nIndex+1] - set[nIndex]){
+    closestVal = set[nIndex-1]
   } else {
-    closestVal = set[nIndex + 1]
+    closestVal = set[nIndex+1]
   }
   
   return closestVal
@@ -37,7 +43,7 @@ const getClosest = (nValue, set) => {
 
 let set = [23, 68, 17, 57, 18, 72]
 // const nValue = parseInt(prompt(`Enter the index position to pick from ${set} - `))
-const nValue = 68
+const nValue = 18
 
 console.log(getClosest(nValue, set))
 

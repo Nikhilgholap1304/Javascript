@@ -31,23 +31,22 @@
 // let arr = ['hii', 8, true, { name: 'nikhil' }, 90.6]
 // console.log(getRevArr(arr)) //[ 90.6, { name: 'nikhil' }, true, 8, 'hii' ]
 
+//lowest to highest
 let arr = [34, 66, 2, 79, 54, 100, 224]
 // console.log(arr.sort((a, b) => a - b)) //lowest to highest
 
-const getLowToHighest = (arr) => {
-  let newArr = []
-  let tempEle;
-  for(let ele1 of arr){
-    for(let ele2 of arr){
-      if(ele1>ele2){
-        tempEle = ele2
-      } else if(ele1<ele2){
-        tempEle = ele1
+const getLowToHighest = (arr) => { //bubble sort
+  let newArr = [...arr]  // Create a copy of the array
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr.length; j++){
+      if(newArr[j]>newArr[j+1]){
+        let temp = newArr[j]
+        newArr[j] = newArr[j+1]
+        newArr[j+1] = temp
       }
     }
-    newArr.push(tempEle)
-  }
-  return newArr
+  }  
+  return newArr;
 }
 console.log(getLowToHighest(arr))
 

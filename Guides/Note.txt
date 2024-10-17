@@ -70,3 +70,11 @@ val2 = null ?? 10
 
 console.log(val1)  //5
 console.log(val2)  //10
+
+
+  
+In ES6, a safe integer is an integer in the range (−2^53,2^53)
+
+These integers are safe because there is a one-to-one mapping between the mathematical integers and their representations in JavaScript.
+
+Beyond this range, JavaScript integers are unsafe, which means that or more mathematical integers are represented as the same JavaScript integer

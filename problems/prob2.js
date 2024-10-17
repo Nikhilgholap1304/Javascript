@@ -18,11 +18,40 @@
 // }
 // console.log(sum)
 
+
 //function to reverse an array
-let arr = ['hii', 8, true, { name: 'nikhil' }, 90.6]
-console.log(arr.reverse())
+// const getRevArr = (arr) => {
+//   // console.log(arr.reverse())
+//   let revArr = []
+//   for (let ele of arr) { //again as a reminder you cannot modify org array while looping it 
+//     revArr.unshift(ele)
+//   }
+//   return revArr
+// }
+// let arr = ['hii', 8, true, { name: 'nikhil' }, 90.6]
+// console.log(getRevArr(arr)) //[ 90.6, { name: 'nikhil' }, true, 8, 'hii' ]
 
+let arr = [34, 66, 2, 79, 54, 100, 224]
+// console.log(arr.sort((a, b) => a - b)) //lowest to highest
 
-for(let ele of arr){
-  
+const getLowToHighest = (arr) => {
+  let newArr = []
+  let tempEle;
+  for(let ele1 of arr){
+    for(let ele2 of arr){
+      if(ele1>ele2){
+        tempEle = ele2
+      } else if(ele1<ele2){
+        tempEle = ele1
+      }
+    }
+    newArr.push(tempEle)
+  }
+  return newArr
 }
+console.log(getLowToHighest(arr))
+
+
+
+
+

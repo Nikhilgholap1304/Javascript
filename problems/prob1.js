@@ -31,7 +31,7 @@ const getClosest = (nValue, set) => {
   //   closestVal = set[nIndex + 1]
   // } //thats why only next position had been getting selected
 
-  if(set[nIndex]-set[nIndex-1] < set[nIndex+1] - set[nIndex]){
+  if(set[nIndex]-set[nIndex-1] < set[nIndex+1] - set[nIndex]){ //[17,18,23].... 17 is most closer to 18
     closestVal = set[nIndex-1]
   } else {
     closestVal = set[nIndex+1]

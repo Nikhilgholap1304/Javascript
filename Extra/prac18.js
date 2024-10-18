@@ -4,7 +4,20 @@ const marks = {
 };
 const { section1: { alpha: alpha1, beta: beta1 } } = marks; 
 //remember we are destructuring and assigning the keys to const keyword
-console.log(alpha1, beta1); //15,16
 
 // console.log(section1) //error
+// console.log(section ,alpha) //ReferenceError: section is not defined
 
+console.log(alpha1, beta1); //15,16
+
+
+//lets trace it what's happening
+
+//first we take whole thing inside curly braces like a key and the object reference to the opposite end
+//so section1 which is present as a key in the marks object
+//by using ":" we are trying to rename
+//think of it as a whole variable (i.e section1)
+//so now we are trying to again destructure this section1 which consist of an object like we have done for marks
+//so alpha, beta are the keys which are again present inside of the section1 object
+//and we are renaming those nested object keys by alpha1 and beta1
+//so the conclusion is we have done nested destructuring and only the node/child keys happening to be renamed can be accesed 

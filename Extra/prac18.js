@@ -27,4 +27,4 @@ const score = [
   [5, 6, 7, 8]
 ]
 const [score1, score2] = score
-console.log(score1, score2)
+console.log(...score1, ...score2)

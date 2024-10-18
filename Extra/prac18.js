@@ -2,7 +2,7 @@ const marks = {
   section1: { alpha: 15, beta: 16 },
   section2: { alpha: -31, beta: 19 }
 };
-const { section1: { alpha: alpha1, beta: beta1 } } = marks; 
+const { section1: { alpha: alpha1, beta: beta1 } } = marks;
 //remember we are destructuring and assigning the keys to const keyword
 
 // console.log(section1) //error
@@ -21,3 +21,10 @@ console.log(alpha1, beta1); //15,16
 //so alpha, beta are the keys which are again present inside of the section1 object
 //and we are renaming those nested object keys by alpha1 and beta1
 //so the conclusion is we have done nested destructuring and only the node/child keys happening to be renamed can be accesed 
+
+const score = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8]
+]
+const [score1, score2] = score
+console.log(score1, score2)

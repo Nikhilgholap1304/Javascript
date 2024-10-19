@@ -92,3 +92,5 @@
 
 // obj.name = "abc";
 // console.log(obj);
+
+console.log(n1==n2);

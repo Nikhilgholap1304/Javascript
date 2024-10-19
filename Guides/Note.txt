@@ -87,6 +87,13 @@ DOM - Document Object Model.
 The named object - document is made up of your entire HTML page and the tree of same document is known as DOM.
 
 BOM - Browser Object Model.
-BOM does nothing but represents additional objects provided by the browser(host environment) for working with everything except document
+BOM does nothing but represents additional objects provided by the browser (host environment) for working with everything except document object
 
-The function write, alert, confirm, prompt,  
+Funfact -
+The function write, alert, confirm, prompt, console are also a part of BOM (browser object model)
+
+Text Node
+Element Node
+Comment Node
+
+A text node is always the leaf of the tree

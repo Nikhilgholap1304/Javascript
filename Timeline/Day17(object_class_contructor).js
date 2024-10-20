@@ -19,7 +19,7 @@ class Employee{
   }
 }
 
-let e1 = new Employee("abc", 300, ["SQL", "PHP"]);
+let e1 = updatenew Employee("abc", 300, ["SQL", "PHP"]);
 Employee.f1()
 // console.log(e1.number) //undefined
 console.log(Employee.number) //100

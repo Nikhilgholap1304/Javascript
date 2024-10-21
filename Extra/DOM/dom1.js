@@ -38,3 +38,6 @@ console.log(document.body.querySelector('h1').nextElementSibling)
 console.log(document.body.querySelector('h1').nextSibling) 
 //text (space)
 
+console.log(document.documentElement)
+// The DOM documentElement property is used to return the documentElement as an Element Object. It is a read-only property. It returns a <HTML> Element
+

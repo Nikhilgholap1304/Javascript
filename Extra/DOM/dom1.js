@@ -13,7 +13,7 @@ console.log(document.childNodes) //it will consider the entire html, therefore s
 
 console.log(Array.from(document.links))
 console.log(Array.from(document.body.childNodes))
-//[text, div, text, script]
+//[text, div, text, script] consists of spaces also
 
 //use $0 to access the current selected element in the browser
 
@@ -25,7 +25,7 @@ console.log(document.body.firstChild )
 console.log(document.body.lastChild )
 
 console.log(document.body.parentElement)
-//html
+//html ele
 console.log(document.body.parentNode)
 //same as above
 

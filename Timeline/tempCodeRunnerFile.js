@@ -1,19 +1,22 @@
-class Employee{
-  static number = 100
-  str = "Javascript";
-  constructor(name,id,skills){
-    this.eName = name
-    this.eId = id;
-    this.eSkills = skills;
-  }
-  getName(){
-    console.log("non static method");
-    console.log(this.eName)
-  }
-  static f1(){
-    console.log("static method");
-  }
-}
+let s = "Hello ";
+let p = "world ";
+let q = "welcome";
+let r = "REACT";
 
-let e1 = new Employee("abc", 300, ["SQL", "PHP"]);
-Employee.f1()
+console.log(s.concat(s,p))
+
+let str1 = "           welcome all!!!!         ";
+// let str1 = "before           welcome all!!!!         after";
+//exception is that it will remove the space from very start and end, but if there's an string encapsulating around then it will not
+console.log(str1)
+console.log(str1.trim())
+//Removes the leading and trailing white space
+
+console.log(str1.trimStart())
+console.log(str1.trimEnd())
+
+console.log(s.toUpperCase());
+//HELLO
+console.log(r.toLowerCase());
+//react
+console.log(str1)

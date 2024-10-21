@@ -3,7 +3,7 @@ let x = 100;
 //! 1) literal way:
 //! 2) using class and constructor:
 class Employee{
-  static number = 100
+  static number = 100 //static property
   str = "Javascript";
   constructor(name,id,skills){
     this.eName = name
@@ -14,7 +14,7 @@ class Employee{
     console.log("non static method");
     console.log(this.eName)
   }
-  static f1(){
+  static f1(){ //static method
     console.log("static method");
   }
 }

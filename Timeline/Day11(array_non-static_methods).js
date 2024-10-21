@@ -1,4 +1,4 @@
-// non static methods bcuz using the object methods
+// non static methods bcuz of using the object methods
 // push,unshift,pop,shift
 
 // let arr = [10,20,30,40,50];

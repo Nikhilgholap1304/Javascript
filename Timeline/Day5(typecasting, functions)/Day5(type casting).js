@@ -4,7 +4,7 @@ console.log(10+"10");
 // number is converted into string
 
 console.log(100-"10");
-// string converted into number
+// string converted into number (NaN)
 
 console.log(100-"str");
 

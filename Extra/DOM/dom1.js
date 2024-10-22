@@ -20,6 +20,7 @@ console.log(Array.from(document.body.childNodes))
 console.log(document.firstChild) //<!DOCTYPE html>
 console.log(document.body.firstChild )
 //#text
+//it purely consider spaces, text nodes also
 
 
 console.log(document.body.lastChild )

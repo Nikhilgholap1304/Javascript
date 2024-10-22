@@ -18,7 +18,7 @@ console.log(Array.from(document.body.childNodes))
 //use $0 to access the current selected element in the browser
 
 console.log(document.firstChild) //<!DOCTYPE html>
-console.log(document.body.firstChild )
+console.log(document.body.firstChild)
 //#text
 //it purely consider spaces, text nodes also
 

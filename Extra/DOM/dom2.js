@@ -9,3 +9,6 @@ console.log("This is the next sibling 'element' ", b.firstElementChild.nextEleme
 // container
 console.log("This is the previous sibling 'element' ", b.lastElementChild.previousElementSibling)
 // nav + container + script
+
+console.log("This is the shortcut to access all the children elements (not the spaces and text nodes)", b.children)
+//it gives the output in the form of html collection

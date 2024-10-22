@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="../dom3.js">
+</head>
+<body>
+  <center>
+    <table
+      border="1px solid"
+      cellspacing="20px"
+      cellpadding="20px"
+      style="border-collapse: collapse; text-align: center;"
+    >
+    <colgroup>
+      <col>
+      <col style="background-color: burlywood;">
+      <col>
+      <col style="background-color:darkgrey">
+    </colgroup>
+      <thead>
+        <tr style="background-color: cadetblue;">
+          <th>Day</th>
+          <th>Subject</th>
+          <th>Time</th>
+          <th>Num of lectures</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td class="html">Html</td>
+          <td>9-11am</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>Sql</td>
+          <td>9-11am</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td rowspan="2">Python</td>
+          <td>9-11am</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <!-- <td>Sql</td> -->
+          <td>9-11am</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>Sql</td>
+          <td>9-11am</td>     
+          <td>3</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="3">total classes</td>
+        <td colspan="1">5</td>
+      </tfoot>
+    </table>
+  </center>
+</body>
+</html>

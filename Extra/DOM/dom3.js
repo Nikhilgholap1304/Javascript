@@ -1,3 +1,4 @@
+//DOM Navigation, usually used when an element is closer to parent or somewhere just around
 let d = document.body
 let t = d.children[0].children[0]
 // let t = d.firstElementChild.firstElementChild
@@ -21,7 +22,6 @@ console.log(t.rows[0].cells)
 console.log(typeof document)
 //object
 
-//Searching the DOM
 
 
 

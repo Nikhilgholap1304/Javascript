@@ -23,8 +23,8 @@ div[1].style.color = "blue"
 div[2].style.color = "purple"
 
 
-console.log(document.querySelectorAll('.clg_cont'))
+console.log(document.querySelectorAll('.clg_cont'));
 
-console.log(document.querySelector('#extra'))
+console.log(document.querySelector('#extra'));
 
-console.log(document.querySelector('#extra').getElementsByClassName('extra_info'))
+console.log(document.querySelector('#extra').getElementsByClassName('extra_info'));

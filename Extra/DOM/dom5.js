@@ -10,5 +10,12 @@ console.log(clg.textContent) //it will only give text even from child tags
 
 
 console.log(document.querySelector("input[type=password]"))
+console.log(document.querySelector(".clg:first-child"))
 
 {/* <input type="password" name="password" id="password"> */}
+
+const text = document.querySelector("h5")
+console.log(text.innerText)
+
+text.innerText = "changed text"
+console.log(text.innerText)

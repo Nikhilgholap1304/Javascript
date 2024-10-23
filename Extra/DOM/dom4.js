@@ -2,7 +2,7 @@
 
 let x = document.getElementById('extra');
 //only selects single elements
-console.log(x) 
+console.log(x)
 
 x.style.background = "orange"
 
@@ -28,3 +28,29 @@ console.log(document.querySelectorAll('.clg_cont'));
 console.log(document.querySelector('#extra'));
 
 console.log(document.querySelector('#extra').getElementsByClassName('extra_info'));
+
+console.log(
+  document.getElementById('extra').className
+)
+//extra_info
+
+// console.log(document.getElementsByClassName('extra_info').id)
+//undefined - bcuz you cannot get a single id from multiple class elements
+
+console.log(document.getElementById('extra').id)
+//extra
+
+console.log(document.getElementById('extra').getAttribute("class"))
+//extra info
+
+document.getElementById('extra').setAttribute("title", "Its an extra");
+
+console.log(document.getElementById("extra"))
+
+console.log(document.getElementById("extra").setAttribute("class","Class anotherClass"))
+//it will override the previous attribute
+
+
+
+
+

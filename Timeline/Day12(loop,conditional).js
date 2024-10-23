@@ -93,6 +93,28 @@ switch (number) {
     }
 }
 
+//IMP
+
+// Several variants of case which share the same code can be grouped.
+// For example, if we want the same code to run for case 3 and case 5:
+
+let a = 3;
+
+switch (a) {
+  case 4:
+    alert('Right!');
+    break;
+
+  case 3: // (*) grouped two cases
+  case 5:
+    alert('Wrong!');
+    alert("Why don't you take a math class?");
+    break;
+
+  default:
+    alert('The result is strange. Really.');
+}
+
 //Ternary Operator
 
 console.log(2 > 3 ? "true" : "false")

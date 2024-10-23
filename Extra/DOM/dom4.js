@@ -10,7 +10,7 @@ console.log(document.getElementsByTagName('div'));
 //Html Collection
 
 console.log(document.getElementsByClassName('extra_info'));
-//Html Collection
+//It returns the Html Collection
 
 console.log(document.querySelector('main'))
 //It selects the first matching element either be it class, id, tag, etc

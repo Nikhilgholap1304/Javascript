@@ -19,3 +19,11 @@ console.log(text.innerText)
 
 text.innerText = "changed text"
 console.log(text.innerText)
+
+const h5 = document.querySelectorAll("h5")
+
+const h5Arr = Array.from(h5) //from nodeList 
+
+h5Arr.forEach((val)=>{
+  val.style.backgroundColor = "purple"
+})

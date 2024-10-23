@@ -36,9 +36,3 @@ setTimeout(() => {
   clearInterval(i); //it directly stops the interval
 }, 10000);
 
-setInterval(() => {
-  console.log("luffy")
-  return ()=>{
-    
-  }
-}, 2000);

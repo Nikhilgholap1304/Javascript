@@ -1,22 +1,5 @@
-let s = "Hello ";
-let p = "world ";
-let q = "welcome";
-let r = "REACT";
+console.log(Math.min());
+console.log(Math.max());
 
-console.log(s.concat(s,p))
-
-let str1 = "           welcome all!!!!         ";
-// let str1 = "before           welcome all!!!!         after";
-//exception is that it will remove the space from very start and end, but if there's an string encapsulating around then it will not
-console.log(str1)
-console.log(str1.trim())
-//Removes the leading and trailing white space
-
-console.log(str1.trimStart())
-console.log(str1.trimEnd())
-
-console.log(s.toUpperCase());
-//HELLO
-console.log(r.toLowerCase());
-//react
-console.log(str1)
+let x2 = Math.random*(9999-1000)+1000;
+console.log(Math.trim(x2))

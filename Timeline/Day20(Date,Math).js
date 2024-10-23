@@ -54,3 +54,10 @@ console.log(Math.cbrt(325)) //5
 
 console.log(Math.pow(10, 2))
 console.log(10 ** 6)
+
+console.log(Math.min()); //Infinity // it compares the arguments with it 
+console.log(Math.max()); //-Infinity //same
+
+//math.random() * (maxval - minval) + minval
+let x2 = Math.random() * (9999 - 1000) + 1000;
+console.log(Math.trunc(x2))

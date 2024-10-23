@@ -17,3 +17,14 @@ console.log(document.querySelector('main'))
 
 console.log(document.querySelectorAll('div'))
 //It returns the node list
+let div = document.querySelectorAll('div')
+div[0].style.color = "red"
+div[1].style.color = "blue"
+div[2].style.color = "purple"
+
+
+console.log(document.querySelectorAll('.clg_cont'))
+
+console.log(document.querySelector('#extra'))
+
+console.log(document.querySelector('#extra').getElementsByClassName('extra_info'))

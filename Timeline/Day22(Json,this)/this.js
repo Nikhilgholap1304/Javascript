@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 // console.log(this)
 // console.log(this===window)
 
@@ -17,10 +17,14 @@ f1()
 
 //!parent scope this keyword value:
 
+console.log(this)
+//see you are able to access the this/window in global hence....
 let ar = () => {
-  console.log(this);
+  console.log("this of arrow", this);
 };
 ar();
+
+//the above this is accessing the "this" value from parent scope which is global.
 
 function f2() {
   console.log(this);
@@ -53,7 +57,7 @@ let o = {
     console.log(this.name)
   },
   ar: () => {
-    console.log("",this)
+    console.log("this inside the arrow",this)
   },
 };
 

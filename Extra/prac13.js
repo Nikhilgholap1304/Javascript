@@ -82,12 +82,16 @@
 
 // navbar({ company: "Nikhil's Company", rate: 5 })
 
-const addToCart = (para1, para2, ...rest) => { //(...rest) here it is called rest operator since we are trying to pack it
-  console.log(para1, para2) //TV AC
-  return rest
-}
+// const addToCart = (para1, para2, ...rest) => { //(...rest) here it is called rest operator since we are trying to pack it
+//   console.log(para1, para2) //TV AC
+//   return rest
+// }
 
-console.log(addToCart('TV', 'AC', 'Shoes', 'Watch', 'Denim')) //[ 'TV', 'AC', 'Shoes' ]
+// console.log(addToCart('TV', 'AC', 'Shoes', 'Watch', 'Denim')) //[ 'TV', 'AC', 'Shoes' ]
+
+// const [a,,,b] = [10,20,30,40,50]
+// console.log(a,b) 
+//10 40
 
 
 

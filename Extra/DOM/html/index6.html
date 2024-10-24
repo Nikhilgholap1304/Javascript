@@ -33,6 +33,22 @@
     //to attach it to the document.body
     document.body.appendChild(div)
 
+    const section = document.createElement("section")
+    div.replaceWith(section)
+
+    console.log(document.body.children)
+    //HTMLCollection(2) [script, section]
+
+    // document.querySelector("h1").outerHTML = "<h2>this is an updated one</h2>"
+
+    // console.log(document.querySelector("h1"))
+
+    //removing
+
+    // section.remove()
+
+    // console.log(section)
+
   </script>
 </body>
 </html>

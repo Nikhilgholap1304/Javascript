@@ -70,7 +70,7 @@ scores.sort()
 console.log(scores) //[ 1, 2, 4, 5, 6, 7 ]
 
 marvel.reverse()
-console.log(marvel) //[ 'spiderman', 'ironman', 'hulk' ]
+console.log(marvel) //[ 'spiderman', 'ironman', 'hulk' ]                                                                                                                                                                                                                                                      
 
 
 

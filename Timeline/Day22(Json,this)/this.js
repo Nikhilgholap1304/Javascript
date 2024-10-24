@@ -62,10 +62,65 @@ let o = {
     console.log(this.name)
   },
   ar: () => {
-    console.log("this inside the arrow",this)
+    console.log("this inside the arrow", this)
+    //getting refered to window bcuz of parent scope (global one)
   },
 };
 
 //o.f1();
 o.demo();
 o.ar();
+
+// ------------------------------- Amazing extra facts of "this" --------------------------------------------
+
+// let obj = {
+//   name: "nikhil",
+//   age: 20,
+//   func: function() {
+//     console.log(this)
+//     //here this will refer to the current object
+//   }
+// }
+// obj.func()
+
+let obj = {
+  name: "nikhil",
+  age: 20,
+  func1: function () {
+    console.log(this)
+    //here this will refer to the current object
+  },
+  func2: function () {
+    const that = this
+    function inner1() {
+      //console.log(this)
+      //undefined -------------------------
+      console.log(that)
+      //obj
+    }
+    let inner2 = () => {
+      console.log(this)
+      //obj
+    }
+    inner1()
+    inner2()
+  }
+}
+obj.func1()
+obj.func2()
+
+//as you can see above that 
+//1) here inside the single function (func1) "this" will refer to current object 
+//2) In func2, nested func (inner1) won't be able to directly access the current object and its properties
+//3) for rectifying the above one we need to do the following
+
+  // func2: function () {
+  //   const that = this 
+  //   function inner1() {
+  //     console.log(this)
+  //     //obj
+  //   }
+  //   inner1()
+  // }
+
+//4) as soon as we use arrow function (inner2) and use "this" inside, it will refer to the parent scopes this i.e the "this" of func2 which is obj

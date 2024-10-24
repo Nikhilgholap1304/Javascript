@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <main>
+    <div class="extra_info" id="extra">
+      <div class="clg_cont" hidden> <!-- added hidden -->
+        <h5 class="clg" id="clgH5">
+          College Name & Place: <span style="display: none">More</span>
+        </h5>
+        <span class="underscore"></span>
+      </div>
+      <div class="clg_cont">
+        <h5 class="clg">What course are you looking for ? &nbsp; <br /></h5>
+        <span class="underscore"></span>
+      </div>
+      <div class="clg_cont">
+        <h5 class="clg" hidden>How did you come to know about Qspiders ?</h5>
+        <br /><span class="underscore"></span>
+      </div>
+    </div>
+  </main>
+  <!-- script -->
+  <script>
+
+    const selector1 = document.querySelector("#extra")
+
+    console.log(selector1.matches(".extra_info")) //it takes selectors as an argument
+    //true
+
+    const selector2 = document.querySelector(".underscore")
+    console.log(selector2.closest(".clg"))
+    //null : since it will only traverse back from parent to grandparent and so on
+    console.log(selector2.closest(".clg_cont"))
+    //<div class = "clg_cont"
+
+    const selector3 = document.querySelector(".clg_cont")
+    const selector4 = document.querySelector(".clg")
+
+    // console.log(selector3.contains(".clg"))
+    // error cuz it will only take the arg of type node
+
+    console.log(selector3.contains(selector4))
+    //true cuz it will search the elements which are descendents and return boolean value
+
+    const selector5 = document.querySelector("#clgH5")
+    console.log(selector1.contains(selector5))
+    //true
+
+    console.log(selector4.contains(selector1))
+    //false
+
+    // console.log(document.querySelector(".clg > span").nodeValue)
+    // console.log(document.querySelector(".clg > span").data)
+    //similar to text content
+
+     const clg_cont = document.body.querySelector(".clg_cont")
+
+    // console.log(clg_cont.hidden)
+    // true
+
+    clg_cont.hidden = false
+    console.log(clg_cont.hidden)
+    //false
+
+
+  </script>
+</body>
+</html>

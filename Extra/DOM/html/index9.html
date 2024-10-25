@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <main>
+    <div class="extra_info" id="extra">
+      <div class="clg_cont" hidden>
+        <!-- added hidden -->
+        <h5 class="clg" id="clgH5">
+          College Name & Place: <span style="display: none">More</span>
+        </h5>
+        <span class="underscore">Just dummy</span>
+      </div>
+      <div class="clg_cont" onclick="alert('welcome'); let a = 'nikhil'; console.log(a)">
+        <h5 class="clg">What course are you looking for ? &nbsp; <br /></h5>
+        <span class="underscore"></span>
+      </div>
+      <div class="clg_cont">
+        <h5 class="clg" hidden>How did you come to know about Qspiders ?</h5>
+        <br /><span class="underscore"></span>
+      </div>
+      <div
+        class="data_class"
+        id="data_id"
+        data-boom="yeahBooom"
+        data-yo="yohoho"
+      >
+        <h1 onmouseenter="alert('you came here')">yoooo this attributes parent contains the custom attribute</h1>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    
+  </script>
+</body>
+</html>

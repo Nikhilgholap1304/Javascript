@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <main>
+      <div class="extra_info" id="extra">
+        <div class="clg_cont" hidden>
+          <!-- added hidden -->
+          <h5 class="clg" id="clgH5">
+            College Name & Place: <span style="display: none">More</span>
+          </h5>
+          <span class="underscore">Just dummy</span>
+        </div>
+        <div class="clg_cont">
+          <h5 class="clg">What course are you looking for ? &nbsp; <br /></h5>
+          <span class="underscore"></span>
+        </div>
+        <div class="clg_cont">
+          <h5 class="clg" hidden>How did you come to know about Qspiders ?</h5>
+          <br /><span class="underscore"></span>
+        </div>
+        <div
+          class="data_class"
+          id="data_id"
+          data-boom="yeahBooom"
+          data-yo="yohoho"
+        >
+          <h1>yoooo this attributes parent contains the custom attribute</h1>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const a = document.querySelector(".extra_info");
+      console.log(a.hasAttribute("id"));
+      //true
+
+      // setAttribute
+      // getAttribute
+      // hasAttribute
+      // removeAttribute
+
+      console.log(a.attributes);
+      //it will return an namedRoadMap object
+
+      //data-* attributes
+      const b = document.querySelector(".data_class");
+      console.log(b);
+      console.log(b.dataset);
+      // DOMStringMap {boom: 'yeahBooom', yo: 'yohoho'}
+
+      console.log(b.dataset.boom);
+      console.log(b.dataset.yo);
+
+      //insertion
+      // const c = document.querySelector(".underscore")
+      // c.innerHTML = c.innerHTML + "<span> crazy </span>"
+      // console.log(c)
+
+      const d = document.querySelector("#extra");
+
+      // const e = document.createElement("div");
+
+      // e.setAttribute("class","appended")
+      // e.innerHTML = "<h2> this is appended one"
+
+      // d.append(e)
+      // appends as a child at last of the node(d)
+      // console.log(d)
+
+      // d.prepend(e)
+      // appends as a child at first of the node(d)
+      // console.log(d)
+
+      // d.after(e)
+      // as you can seen it will directly add the child just after the node (d)
+      // console.log(document.querySelector("main"))
+
+      // d.before(e)
+      // as you can seen it will directly add the child just before the node (d)
+      // console.log(document.querySelector("main"))
+
+      // d.replaceWith(e)
+
+      const e = document.querySelector(".clg_cont");
+      e.insertAdjacentHTML("afterbegin", "<h1> This is after begin </h1>");
+      e.insertAdjacentHTML("afterend", "<h1> This is after end </h1>");
+      e.insertAdjacentHTML("beforebegin", "<h1> This is before begin </h1>");
+      e.insertAdjacentHTML("beforeend", "<h1> This is before end </h1>");
+      console.log(d)
+    </script>
+  </body>
+</html>

@@ -87,11 +87,40 @@
       // d.replaceWith(e)
 
       const e = document.querySelector(".clg_cont");
-      e.insertAdjacentHTML("afterbegin", "<h1> This is after begin </h1>");
-      e.insertAdjacentHTML("afterend", "<h1> This is after end </h1>");
-      e.insertAdjacentHTML("beforebegin", "<h1> This is before begin </h1>");
-      e.insertAdjacentHTML("beforeend", "<h1> This is before end </h1>");
-      console.log(d)
+      // e.insertAdjacentHTML("afterbegin", "<h1> This is after begin </h1>");
+      // e.insertAdjacentHTML("afterend", "<h1> This is after end </h1>");
+      // e.insertAdjacentHTML("beforebegin", "<h1> This is before begin </h1>");
+      // e.insertAdjacentHTML("beforeend", "<h1> This is before end </h1>");
+      // console.log(d)
+
+      // classList and className
+
+      e.className = "clg_cont extra_class super_class"
+      console.log(e.className)
+      // clg_cont extra_class super_class
+
+      //above property changes the entire class but what if we want to do something to just single class without altering the existing class
+
+      console.log(e.classList)
+      //DOMTokenList(3) ['clg_cont', 'extra_class', 'super_class', value: 'clg_cont extra_class super_class']
+
+      console.log(e.classList[1])
+      //extra_class
+
+      e.classList.remove('extra_class')
+      console.log(e.classList)
+      
+      e.classList.add('extra_class1')
+      console.log(e.classList)
+      
+      e.classList.toggle('extra_class2')
+      //it just add the class if its not present and removes it if its present
+      console.log(e.classList.contains('extra_class2')) //true
+      
+      e.classList.toggle('extra_class2')
+      console.log(e.classList.contains('extra_class2')) //false
+
+
     </script>
   </body>
 </html>

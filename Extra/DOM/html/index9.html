@@ -29,13 +29,18 @@
         data-boom="yeahBooom"
         data-yo="yohoho"
       >
-        <h1 onmouseenter="alert('you came here')">yoooo this attributes parent contains the custom attribute</h1>
+        <h1 onmouseenter="console.log('you came here')">yoooo this attributes parent contains the custom attribute</h1>
       </div>
     </div>
+    <button id="btn">Click</button>
+    <button onclick="alert(this.innerHTML)">Click me</button>
   </main>
 
   <script>
-    
+    const b = document.querySelector("#btn")
+    b.onclick = () => {
+      console.log('Yeah you clicked the button')
+    }
   </script>
 </body>
 </html>

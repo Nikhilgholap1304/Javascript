@@ -33,14 +33,20 @@
       </div>
     </div>
     <button id="btn">Click</button>
-    <button onclick="alert(this.innerHTML)">Click me</button>
+    <!-- <button onclick="alert(this.innerHTML)">Click me</button> -->
   </main>
 
-  <script>
-    const b = document.querySelector("#btn")
-    b.onclick = () => {
-      console.log('Yeah you clicked the button')
-    }
+  <script src="../event_handling.js"> //before tryna execute the following remove src
+    // const b = document.querySelector("#btn")
+    // b.onclick = () => {
+    //   console.log('Yeah you clicked the button')
+    // }
+    // b.onclick = () => {
+    //   console.log('This onclick has overridden by previous onclick')
+    // }
+    //so this is the drawback of using onclick or any other mouse event as a property directly
+
+
   </script>
 </body>
 </html>

@@ -27,15 +27,22 @@ const b = document.querySelector("#btn")
 //   console.log(e.x, e.y)
 // })
 
-b.addEventListener('mouseover', (e) => {
-  console.log("hii")
+// b.addEventListener('mouseover', (e) => {
+//   console.log("hii")
+// })
+// b.addEventListener('mousedown', (e) => {
+//   console.log("down")
+// })
+// b.addEventListener('keydown', (e) => {
+//   console.log("keydown")
+// })
+b.addEventListener('click', (e) => {
+  console.log(e.target) //you will get the element where the event is taking place
 })
-b.addEventListener('mousedown', (e) => {
-  console.log("down")
-})
-b.addEventListener('keydown', (e) => {
-  console.log("keydown")
-})
+
+// b.addEventListener('submit', (e) => {
+//   console.log("form submit")
+// })
 
 
 // Mouse events:

@@ -71,15 +71,28 @@ b.addEventListener('click', (e) => {
 let ul = document.querySelector('ul');
 let li4 = document.getElementsByClassName('special')[0];
 
+//Bubbling - bottom to top it will affect and execute i.e first child and then parent and so on
+
 ul.addEventListener('click', () => {
   console.log("parent ul is clicked");
-})
+}, false) //bubbling mode
 
 li4.addEventListener('click', ()=>{
   console.log("li(4)th child is clicked")
-})
+}, false) //bubbling mode
+
+//Capturing - top to bottom it will affect and execute i.e first parent and then child and so on
+
+ul.addEventListener('click', () => {
+  console.log("parent ul is clicked");
+}, true) //capturing mode
+
+li4.addEventListener('click', ()=>{
+  console.log("li(4)th child is clicked")
+}, true) //capturing mode
 
 //now observe what is happening, Its an Bubbling up / Event Propagation which means whenever you click on child then it is also taking an effect on the parent event handler
+// here first the child one will execute or take place and then the parent one
 
-//here first the child one will execute or take place and then the parent one
+//and its opposite for capturing mode
 

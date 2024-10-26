@@ -65,3 +65,21 @@ b.addEventListener('click', (e) => {
 
 // CSS events:
 // transitionend – when a CSS-animation finishes.
+
+//Event propagation
+
+let ul = document.querySelector('ul');
+let li4 = document.getElementsByClassName('special')[0];
+
+ul.addEventListener('click', () => {
+  console.log("parent ul is clicked");
+})
+
+li4.addEventListener('click', ()=>{
+  console.log("li(4)th child is clicked")
+})
+
+//now observe what is happening, Its an Bubbling up / Event Propagation which means whenever you click on child then it is also taking an effect on the parent event handler
+
+//here first the child one will execute or take place and then the parent one
+

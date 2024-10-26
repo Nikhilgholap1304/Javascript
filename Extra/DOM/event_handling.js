@@ -108,12 +108,12 @@ let li4 = document.getElementsByClassName('special')[0];
 //   e.stopPropagation() //in case we don't want the bubbling up or propagation and want to perform an event individually without moving upwards
 // })
 
-let google = document.querySelector('#google');
+// let google = document.querySelector('#google');
 
-google.addEventListener('click', (e) => {
-  console.log("google clicked")
-  e.preventDefault() 
-})
+// google.addEventListener('click', (e) => { //event object capturing
+//   console.log("google clicked")
+//   e.preventDefault() 
+// })
 
 //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 
@@ -123,6 +123,36 @@ google.addEventListener('click', (e) => {
 // Clicking on a link, prevent the link from following the URL
 
 
+// ul.addEventListener('click', (e) => {
+//   // console.log(e.target.parentNode) //to select the parent node
+//   let target = e.target //eventhough you are applying the event on ul, you will get the target only where you touched/tapped
+//   target.remove()
+// })
+
+// target.parentNode.removeChild(target)
+
+// ul.addEventListener('click', (e) => {
+//   console.log(e.target.tagName) //LI or UL depends on your click
+//   if (e.target.tagName === 'LI') { //to prevent the deletion of whole UL node
+//     let target = e.target
+//     target.remove()
+//   }
+// })
+
+// .addEventListener(event, handler/listener);
+
+let enter = confirm("Confirm if you want event listener or not")
+
+let handler = () => {
+  console.log("Event Listener is happy to serve you")
+}
+
+b.addEventListener('click', handler)
+if (!enter) {
+  b.removeEventListener('click', handler)
+}
+
+//note while adding and removing the event listeners the handler function object must be same or must have same object address
 
 
 

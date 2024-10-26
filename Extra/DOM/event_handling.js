@@ -36,9 +36,9 @@ const b = document.querySelector("#btn")
 // b.addEventListener('keydown', (e) => {
 //   console.log("keydown")
 // })
-b.addEventListener('click', (e) => {
-  console.log(e.target) //you will get the element where the event is taking place
-})
+// b.addEventListener('click', (e) => {
+//   console.log(e.target) //you will get the element where the event is taking place
+// })
 
 // b.addEventListener('submit', (e) => {
 //   console.log("form submit")
@@ -71,28 +71,58 @@ b.addEventListener('click', (e) => {
 let ul = document.querySelector('ul');
 let li4 = document.getElementsByClassName('special')[0];
 
-//Bubbling - bottom to top it will affect and execute i.e first child and then parent and so on
+// Bubbling - bottom to top it will affect and execute i.e first child and then parent and so on
 
-ul.addEventListener('click', () => {
-  console.log("parent ul is clicked");
-}, false) //bubbling mode
+// ul.addEventListener('click', () => {
+//   console.log("parent ul is clicked");
+// }, false) //bubbling mode
 
-li4.addEventListener('click', ()=>{
-  console.log("li(4)th child is clicked")
-}, false) //bubbling mode
+// li4.addEventListener('click', () => {
+//   console.log("li(4)th child is clicked")
+// }, false) //bubbling mode
 
-//Capturing - top to bottom it will affect and execute i.e first parent and then child and so on
+// Capturing - top to bottom it will affect and execute i.e first parent and then child and so on
 
-ul.addEventListener('click', () => {
-  console.log("parent ul is clicked");
-}, true) //capturing mode
+// ul.addEventListener('click', () => {
+//   console.log("parent ul is clicked");
+// }, true) //capturing mode
 
-li4.addEventListener('click', ()=>{
-  console.log("li(4)th child is clicked")
-}, true) //capturing mode
+// li4.addEventListener('click', () => {
+//   console.log("li(4)th child is clicked")
+// }, true) //capturing mode
 
-//now observe what is happening, Its an Bubbling up / Event Propagation which means whenever you click on child then it is also taking an effect on the parent event handler
+// now observe what is happening, Its an Bubbling up / Event Propagation which means whenever you click on child then it is also taking an effect on the parent event handler
 // here first the child one will execute or take place and then the parent one
 
-//and its opposite for capturing mode
+// and its opposite for capturing mode
+
+
+//Stop Propagation
+
+// ul.addEventListener('click', () => {
+//   console.log("parent ul is clicked");
+// })
+
+// li4.addEventListener('click', (e) => {
+//   console.log("li(4)th child is clicked")
+//   e.stopPropagation() //in case we don't want the bubbling up or propagation and want to perform an event individually without moving upwards
+// })
+
+let google = document.querySelector('#google');
+
+google.addEventListener('click', (e) => {
+  console.log("google clicked")
+  e.preventDefault() 
+})
+
+//The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+
+// For example, this can be useful when:
+
+// Clicking on a "Submit" button, prevent it from submitting a form or reloading or getting back to empty
+// Clicking on a link, prevent the link from following the URL
+
+
+
+
 

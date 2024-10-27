@@ -155,4 +155,28 @@ if (!enter) {
 //note while adding and removing the event listeners the handler function object must be same or must have same object address
 
 
+// The change event triggers when the element has finished changing.
+// For text inputs that means that the event occurs when it loses focus.
+// For instance, while we are typing in the text field below – there’s no event. But when we move the focus somewhere else, for instance, click on a button – there will be a change event:
+// <input type="text" onchange="alert(this.value)">
+
+// Event: input
+// The input event triggers every time after a value is modified by the user.
+
+// Unlike keyboard events, it triggers on any value change, even those that does not involve keyboard actions: pasting with a mouse or using speech recognition to dictate the text.
+
+// input.oninput = function() {
+//   result.innerHTML = input.value;
+// };
+
+// Events: cut, copy, paste
+// These events occur on cutting/copying/pasting a value.
+
+// They belong to ClipboardEvent class and provide access to the data that is cut/copied/pasted.
+
+// We also can use event.preventDefault() to abort the action, then nothing gets copied/pasted.
+
+
+
+
 

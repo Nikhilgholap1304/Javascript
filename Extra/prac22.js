@@ -8,5 +8,42 @@
 //A(harry) -> B(chintu) //giving other person to handle the callback function and do whatever you want
 //A(harry) <- B(chintu) //without directly getting the action performed globally by chintu, he first handovers the result/resolve/outcome/response back to the A(harry) and nowharry will decide what to do 
 
-1
+
+//IMP
+//Callback Hell or Pyramid of Doom
+//when we have callbacks inside the callback and code expands horizontally then we call it callback hell or pyramid of doom
+//e.g
+
+
+const HOF = (callback, anime) => {
+  console.log(callback(anime))
+}
+
+
+HOF((anime) => {
+
+  HOF((anime) => {
+
+    HOF((anime) => {
+
+      HOF((anime) => {
+        return `${anime} is the best`
+      }, 'Attack On Titan')
+
+      return `${anime} is the best`
+    }, 'Jujutsu Kaisen')
+
+    return `${anime} is the best`
+  }, 'Naruto')
+
+  return `${anime} is the best`
+
+}, "One Piece")
+
+// Attack On Titan is the best
+// Jujutsu Kaisen is the best
+// Naruto is the best
+// One Piece is the best
+
+
 

@@ -12,7 +12,7 @@
 //IMP
 //Callback Hell or Pyramid of Doom
 //when we have callbacks inside the callback and code expands horizontally then we call it callback hell or pyramid of doom
-//e.g
+//e.g where the code gets highly unreadable
 
 
 const HOF = (callback, anime) => {
@@ -44,6 +44,9 @@ HOF((anime) => {
 // Jujutsu Kaisen is the best
 // Naruto is the best
 // One Piece is the best
+
+// So this behavior can also be called as asynchronous behaviour
+//bcuz no matter what the result is it will perform the operation whenever an HOF called and no matter what result is, it will move forward
 
 
 

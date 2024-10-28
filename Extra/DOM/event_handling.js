@@ -177,6 +177,13 @@ if (!enter) {
 // We also can use event.preventDefault() to abort the action, then nothing gets copied/pasted.
 
 
+// Event: load
+// object.onload = () => {
+// }
+
+// Event: error
+// object.onerror = () => {
+// }
 
 
 

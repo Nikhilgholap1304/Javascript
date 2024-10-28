@@ -42,7 +42,7 @@ const arr2 = function () {
   return 100;
 };
 
-  //!IIFE - immediately invoked function expression
+//!IIFE - immediately invoked function expression
 
 //semicolon at previous statement is must bcuz the javascript engine will interpret parenthesis as for function argument or method
 (() => {
@@ -58,7 +58,7 @@ const HOF = (a, b) => { //paramenter or an placeholder
   console.log(a("callback function"));
 }
 
-HOF(
-  ((x) => x), 20); //!callback function
+HOF(((x) => x), 20); //!callback function
+//callback functions are the functions which would be sent as an argument and will get involed inside the outer function
 
 //!Nested Function

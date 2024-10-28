@@ -19,14 +19,13 @@
 //   // executor (the producing code, "singer")
 // });
 
-console.log("hello one")
 
-//Promise constructor to make an (instance) promise object
-const promise = new Promise((resolve, reject) => {
-  console.log("I am an executer")
-  resolve(2)
-})
-console.log(promise)
+// //Promise constructor to make an (instance) promise object
+// const promise = new Promise((resolve, reject) => {
+//   console.log("I am an executer")
+//   resolve(2)
+// })
+// console.log(promise)
 // Promise
 // [[Prototype]]: Promise
 // catch: ƒ catch()
@@ -49,8 +48,31 @@ console.log(promise)
 // state — initially "pending", then changes to either "fulfilled" when resolve is called or "rejected" when reject is called.
 // result — initially undefined, then changes to value when resolve(value) is called or error when reject(error) is called
 
+// console.log("hello one")
+
 // setTimeout(() => {
 //   console.log("hello two in 2 seconds")
 // }, 2000);
 
-console.log("My name is Nikhil")
+
+
+
+const p1 = new Promise((resolve, reject) => {
+  console.log("Promise1 is pending")
+  setTimeout(() => {
+    console.log("I am a promise and I got resolved")
+    resolve("done")
+  }, 5000);
+})
+
+const p2 = new Promise((resolve, reject) => {
+  console.log("Promise2 is pending")
+  setTimeout(() => {
+    console.log("I am a promise and I got rejected");
+    reject()
+  }, 5000);
+})
+
+console.log(p1, p2)
+
+

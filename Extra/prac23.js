@@ -104,6 +104,9 @@
 // @param onfulfilled — The callback to execute when the Promise is resolved.
 // @param onrejected — The callback to execute when the Promise is rejected.
 
+//If we’re interested only in errors, then we can use null as the first argument: .then(null, errorHandlingFunction)
+// .catch(f) is the same as promise.then(null, f)
+
 // new Promise((resolve, reject) => {
 //   setTimeout(() => {
 //     console.log("Heloooooo 1")
@@ -140,3 +143,10 @@ new Promise((resolve, reject) => {
 })
 // Heloooooo 1
 // we got an error Awesome
+
+//this method will execute if promise gets resolved else it would be skipped and catch method will execute when an promise gets rejected
+
+//IMP
+// on the present evidences the promise is also significantly used to handle the asyncronous functions / behaviour / activites to make it synchrous and to execute it one after the another based on resolve or reject
+
+// Promises allow us to do things in the natural order

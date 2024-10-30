@@ -242,3 +242,6 @@ new Promise((resolve, reject) => {
 // A finally handler doesn’t get the outcome of the previous handler (it has no arguments). This outcome is passed through instead, to the next suitable handler.
 // If a finally handler returns something, it’s ignored.
 // When finally throws an error, then the execution goes to the nearest error handler.
+
+//Promise Chaining is the chaining of those promises using "then" method and passing values from one to other ans in a synchronized way
+//Multiple Handlers indicates just having multiple .then(), each will run independently and won't be interconnected and waiting for previous promise to get fulfilled.... also we don't return new promise inside ".this()"

@@ -118,29 +118,29 @@
 
 //it will not perfom the "then" method in an pending state cuz we haven't called either resolve or reject and hence its not fulfilled to move further
 
-new Promise((resolve, reject) => {
-  setTimeout(() => {
-    console.log("Heloooooo 1")
-    resolve("Awesome")
-  }, 2000);
-}).then((value)=>{
-  console.log("Helooooooo 2", value)
-}).catch((error)=>{
-  console.log("we got an error", error)
-})
+// new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("Heloooooo 1")
+//     resolve("Awesome")
+//   }, 2000);
+// }).then((value)=>{
+//   console.log("Helooooooo 2", value)
+// }).catch((error)=>{
+//   console.log("we got an error", error)
+// })
 // Heloooooo 1
 // Helooooooo 2 Awesome
 
-new Promise((resolve, reject) => {
-  setTimeout(() => {
-    console.log("Heloooooo 1")
-    reject("Awesome")
-  }, 2000);
-}).then((value)=>{
-  console.log("Helooooooo 2", value)
-}).catch((error)=>{
-  console.log("we got an error", error)
-})
+// new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     console.log("Heloooooo 1")
+//     reject("Awesome")
+//   }, 2000);
+// }).then((value)=>{
+//   console.log("Helooooooo 2", value)
+// }).catch((error)=>{
+//   console.log("we got an error", error)
+// })
 // Heloooooo 1
 // we got an error Awesome
 
@@ -150,3 +150,95 @@ new Promise((resolve, reject) => {
 // on the present evidences the promise is also significantly used to handle the asyncronous functions / behaviour / activites to make it synchrous and to execute it one after the another based on resolve or reject
 
 // Promises allow us to do things in the natural order
+
+
+//Promise Chaining
+//the promise which doesn't takes time can be called as "immediately resolved promise"
+//The idea is to pass the result through the chain of .then handlers
+
+//the .then handler is then called, which returns a new promise(resolved with two values)
+//the next .then() gets the result of previous one and this keeps on going
+
+//every call to .then() returns a new promise whose value is passed to the next one and so on.
+//we can create custom promises inside .then()
+
+// new Promise((resolve, reject)=>{
+//   setTimeout(() => {
+//     resolve("Done you dumbass")
+//   }, 2000);
+// }).then((value)=>{
+//   setTimeout(() => {
+//     console.log("then1",value)
+//   }, 1000);
+// }).then((value)=>{
+//   setTimeout(() => {
+//     console.log("then2",value)
+//   }, 500);
+// })
+//! won't work
+
+
+///Example
+new Promise((resolve, reject) => { 
+  setTimeout(() => {
+    resolve("1st step done you moron")
+  }, 2000);
+}).then((value) => {
+  return new Promise((resolve) => {
+    console.log(value)
+    setTimeout(() => {
+      resolve("2nd step done you jerk")
+    }, 2000);
+  })
+}).then((value) => {
+  return new Promise((resolve) => {
+    console.log(value)
+    setTimeout(() => {
+      resolve("3rd step done you bastard")
+    }, 2000);
+  })
+}).then((value) => console.log(value)).finally(()=>{
+  console.log("well this is finally and gonna run no matter what")
+})
+
+// 1st step done you moron
+// 2nd step done you jerk
+// 3rd step done you bastard
+
+//invoked a promise contructor directly without creating a promise object to save lines and who wants to use that object again and again like obj.then() obj.then()
+//it we have actually called promise constructor so no need to return the new promise with its fulfilled state
+
+//we can pass anything inside the resolve and call it if we want that promise to resolve it otherwise reject it
+
+//when we use "then" method to pass one callback; getting one value as a paramter is nothing but the same value we have passed as a argument while calling resolve or reject callbacks in previous "then" or an promise constructor
+//if it were to continue then it has to return new promise with fullfilled state
+
+//rest of the "then's" also passes one callback function only for resolved promise (second one is for error) and what value it gets as a parameter is also the same value we passed to the resolve/reject methods inside the new returned promise which was in previous .then()
+
+//and it can go on
+
+
+// Cleanup: finally
+// Just like there’s a finally clause in a regular try {...} catch {...}, there’s finally in promises.
+
+// The call .finally(f) is similar to .then(f, f) in the sense that f runs always, when the promise is settled: be it resolve or reject.
+
+// The idea of finally is to set up a handler for performing cleanup/finalizing after the previous operations are complete.
+
+// E.g. stopping loading indicators, closing no longer needed connections, etc.
+
+new Promise((resolve, reject) => {
+  /* do something that takes time, and then call resolve or maybe reject */
+})
+  // runs when the promise is settled, doesn't matter successfully or not
+  .finally(() => "stop loading indicator")
+  // so the loading indicator is always stopped before we go on
+  .then(result => "show result", err => "show error")
+
+//As said for finally(handler), it’s a place to do generic cleanup, no matter what the outcome was.
+
+//To summarize:
+
+// A finally handler doesn’t get the outcome of the previous handler (it has no arguments). This outcome is passed through instead, to the next suitable handler.
+// If a finally handler returns something, it’s ignored.
+// When finally throws an error, then the execution goes to the nearest error handler.

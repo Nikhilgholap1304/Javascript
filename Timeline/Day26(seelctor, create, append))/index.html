@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <script>
+      let p = document.getElementsByTagName("p");
+      console.log(p);
+
+      [...p].forEach((v) => {
+        console.log(v);
+      });
+
+      for (let i = 0; i < p.length; i++) {
+        p[i].style.background = "ccc";
+        p[i].style.color = "red";
+        p[i].style.padding = "10px 20px";
+      }
+
+      let d = document.querySelector(".demo");
+      console.log(d);
+
+      let h2 = document.querySelector("#heading");
+      console.log(h2);
+      h2.innerHTML = "hello world";
+      h2.innerText = "Hello world";
+
+      let s = document.querySelector("section");
+      console.log(s);
+
+      s.innerHTML = `<h1>Section content</h1>`;
+      s.innerText = `<h1>Section content</h1>`;
+
+      let para = document.querySelectorAll(".demo");
+      console.log(para);
+
+      para.forEach((v, i) => {
+        console.log(v, i);
+        v.style.background = "yellow";
+      });
+
+      let m = document.createElement("article");
+      m.innerHtml = `<h1>Article Content</h1>`;
+      console.log(m);
+
+      s.appendChild(m); //it will only append single element as a child
+
+      let m2 = document.getElementsByClassName("m2")[0];
+
+      m2.innerHTMl = `
+      <div>Demo Content</div>
+      <div>Demo Content</div>
+      <div>Demo Content</div>
+      `;
+
+      let c1 = document.createElement("div");
+      let c2 = document.createElement("h2");
+      let c3 = document.createElement("h1");
+
+      [c1, c2, c3].forEach((v) => {
+        v.innerHTML = "Demo Content";
+      });
+
+      m2.append(c1, c2, c3); //it will append multiple elements as the childs
+
+    </script>
+  </body>
+</html>

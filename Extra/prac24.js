@@ -94,4 +94,11 @@ Promise.reject("This is an rejected value").catch((value)=>{
   //This is an rejected value
 })
 
+// Promise.all()
+// Promise.any()
+// Promise.allSettled()
+// Promise.race()
+// Promise.resolve()
+// Promise.reject()
+
 

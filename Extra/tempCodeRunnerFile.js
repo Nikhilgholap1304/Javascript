@@ -1,17 +1,17 @@
-const p1 = new Promise((resolve, reject) => {
-  console.log("Promise1 is pending")
-  setTimeout(() => {
-    console.log("I am a promise and I got resolved")
-    resolve(true)
-  }, 5000);
-})
+et p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject("p1 promise")
+//   }, 3000);
+// })
 
-const p2 = new Promise((resolve, reject) => {
-  console.log("Promise2 is pending")
-  setTimeout(() => {
-    console.log("I am a promise and I got rejected");
-    reject(false)
-  }, 5000);
-})
+// let p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject("p2 promise")
+//   }, 2000);
+// })
 
-console.log(p1, p2)
+// let p3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject("p3 promise")
+//   }, 4000);
+// })

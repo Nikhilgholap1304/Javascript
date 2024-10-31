@@ -34,7 +34,7 @@ let p4 = Promise.all(
   // [ 'p1 promise', 'p2 promise', 'p3 promise' ]
 }).catch((error) => {
   console.log("unfortunately rejected", error)
-  //unfortunately rejected p3 promise if even one promise <rejects></rejects>
+  //unfortunately rejected p3 promise if even one promise reject
 })
 
 

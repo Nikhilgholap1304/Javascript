@@ -32,11 +32,15 @@
 //   //unfortunately rejected p3 promise if even one promise reject
 // })
 
-//Creates a Promise that is resolved with an array of results when all of the provided Promises resolve, otherwise rejected when any Promise is rejected.
+//Creates a Promise that is resolved by waiting for an entire array of results together when all of the provided Promises resolve, otherwise rejected when any Promise is rejected.
 
 // @param values — An iterable of Promises.
 
 // @returns — A new Promise.
+
+// Let’s say we want many promises to execute in parallel and wait until all of them are ready.
+
+// For instance, download several URLs in parallel and process the content once they are all done.
 
 
 // Promise.allSettled(

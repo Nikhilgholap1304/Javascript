@@ -108,11 +108,11 @@
 //If we’re interested only in errors, then we can use null as the first argument: .then(null, errorHandlingFunction)
 // .catch(f) is the same as promise.then(null, f)
 
-// new Promise((resolve, reject) => {
+// new Promise((resolve, reject) => { //request is also an instance
 //   setTimeout(() => {
 //     console.log("Heloooooo 1")
 //   }, 2000);
-// }).then((value)=>{
+// }).then((value)=>{ //response is also an instance
 //   console.log("Helooooooo 2", value)
 // })
 // Heloooooo 1

@@ -179,7 +179,7 @@
 
 
 ///Example
-new Promise((resolve, reject) => { 
+new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("1st step done you moron")
   }, 2000);
@@ -197,7 +197,7 @@ new Promise((resolve, reject) => {
       resolve("3rd step done you bastard")
     }, 2000);
   })
-}).then((value) => console.log(value)).finally(()=>{
+}).then((value) => console.log(value)).finally(() => {
   console.log("well this is finally and gonna run no matter what")
 })
 
@@ -245,3 +245,23 @@ new Promise((resolve, reject) => {
 
 //Promise Chaining is the chaining of those promises using "then" method and passing values from one to other ans in a synchronized way
 //Multiple Handlers indicates just having multiple .then(), each will run independently and won't be interconnected and waiting for previous promise to get fulfilled.... also we don't return new promise inside ".this()"
+
+// Promise handlers .then/.catch/.finally are always asynchronous.
+
+// Even when a Promise is immediately resolved, the code on the lines below .then/.catch/.finally will still execute before these handlers.
+
+let promise = Promise.resolve();
+promise.then(() => console.log("promise done!"));
+console.log("code finished"); // this alert shows first
+//code finished
+//promise done!
+
+//As you already know promise is used to handle to asynchronous activities , hence the promise handler itself are asynchrnous in nature and will take time since would be first pushed to queue
+
+//so as you already know that synchronous code will run first then asynchronous will
+
+// Promise handling is always asynchronous, as all promise actions pass through the internal “promise jobs” queue, also called “microtask queue” (V8 term).
+
+// So .then/catch/finally handlers are always called after the current code is finished.
+
+// If we need to guarantee that a piece of code is executed after .then/catch/finally, we can add it into a chained .then call.

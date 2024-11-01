@@ -88,15 +88,23 @@
 
 //This promise just want any promise to be fulfilled and same as race but the difference it it will only consider the promise which got resolved first and return single value of that promise and also if none of the promises were resolved then it will throw an aggregate error 
 
-Promise.resolve("This is an resolve value").then((value)=>{
+Promise.resolve("This is an resolve value").then((value) => {
   console.log(value)
   //This is an resolve value
 })
 
-Promise.reject("This is an rejected value").catch((value)=>{
+Promise.reject("This is an rejected value").catch((value) => {
   console.log(value)
   //This is an rejected value
 })
+
+// A shortcut for .then()
+// if we are doing like this
+// p.then((value)=>{
+//    alert(value)
+// })
+//then we can also do like this
+// p.then(alert) cuz anyway we pass one callback function which gets called with the value hence in a same way the alert(its a function) would also be called with the same value
 
 // Promise.all()
 // Promise.any()

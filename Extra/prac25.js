@@ -56,20 +56,39 @@
 // f3()
 
 
-const f3 = async () => {
-  let promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(1)
-    }, 2000)
-  })
+// const f4 = async () => {
+//   let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(1)
+//     }, 2000)
+//   })
 
-  let value = await promise
-  console.log("hii")
-  console.log(value) 
-  // hii
-  // 1
-  // Here comes the surprise whatever code is after the await the same will also execute after getting the resolved promise and its result/value
-}
+//   let value = await promise
+//   console.log(value) 
+//   console.log("hii")
+//   // 1
+//   // hii
+//   // Here comes the surprise whatever code is after the await the same will also execute after getting the resolved promise and its result/value
+// }
 
-f3()
+// f4()
+
+// const f5 = async () => {
+//   let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(1)
+//     }, 2000)
+//   })
+
+//   let value = await promise //.its like using then() we are accessing the value and then returning new promise with the existing value / new value
+//   return value
+// }
+
+// f5().then((value)=>{ //
+//   console.log(value)
+//   //1
+//   //It will return undefined if we are not returning a resolved promise
+// })
+
+
 

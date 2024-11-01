@@ -48,6 +48,7 @@
 // state — initially "pending", then changes to either "fulfilled" when resolve is called or "rejected" when reject is called.
 // result — initially undefined, then changes to value when resolve(value) is called or error when reject(error) is called
 
+
 // console.log("hello one")
 
 // setTimeout(() => {
@@ -264,4 +265,4 @@ console.log("code finished"); // this alert shows first
 
 // So .then/catch/finally handlers are always called after the current code is finished.
 
-// If we need to guarantee that a piece of code is executed after .then/catch/finally, we can add it into a chained .then call.
+// If we need to guarantee that a piece of code is executed after .then/catch/finally, we can add it into a chained .then call method.

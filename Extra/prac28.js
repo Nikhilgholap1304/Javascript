@@ -119,3 +119,30 @@ try {
 
 
 
+// Rethrowing
+// In the example above we use try...catch to handle incorrect data. But is it possible that another unexpected error occurs within the try {...} block? Like a programming error (variable is not defined) or something else, not just this “incorrect data” thing.
+
+// let json = '{ "age": 30 }'; // incomplete data
+
+// try {
+//   user = JSON.parse(json); // <-- forgot to put "let" before user
+
+//   // ...
+// } catch (err) {
+//   alert("JSON Error: " + err); // JSON Error: ReferenceError: user is not defined
+//   // (no JSON Error actually)
+// }
+
+//rethrowing of error
+//here what it says is we only want the expected or relevent error and to rethrow / or do not try to handle the rest of the errors... 
+
+// In our case, try...catch is placed to catch “incorrect data” errors related to json. But by its nature, catch gets all errors from try. Here it gets an unexpected error, but still shows the same "JSON Error" message. That’s wrong and also makes the code more difficult to debug
+
+//rethrow as the name suggest whatever error we were suppose to handle that thrown error is to rethrow it and won't handle it
+
+
+// Catch should only process errors that it knows and “rethrow” all others./////////////////////////////
+
+// Usually, we can check the error type using the instanceof operator:
+
+

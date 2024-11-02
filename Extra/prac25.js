@@ -187,6 +187,16 @@
 // This code:
 
 // async function f1() {
+//   try {
+//     await Promise.reject(("Whoops!"));
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+// f1()
+//Whoops!
+
+// async function f1() {
 //   return await Promise.reject(new Error("Whoops!"));
 // }
 // f1()
@@ -230,31 +240,55 @@
 // ]);
 // In the case of an error, it propagates as usual, from the failed promise to Promise.all, and then becomes an exception that we can catch using try..catch around the call.
 
-const overAll = async () => {
-  let p1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("1")
-    }, 2000);
-  })
-  let p2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("2")
-    }, 3000);
-  })
-  let p3 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve("3")
-    }, 4000);
-  })
-  let value = await Promise.all([p1, p2, p3]) //it says wait first let all promises to execute then you console the values not the pending one
-  console.log(value)
-  //for now it will take 4s when all the promise gets fulfilled but if you even put await to all the individual promises then it will take total of 9s sec bcuz it will execute one after another
+// const overAll = async () => {
+//   let p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("1")
+//     }, 2000);
+//   })
+//   let p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("2")
+//     }, 3000);
+//   })
+//   let p3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve("3")
+//     }, 4000);
+//   })
+//   let value = await Promise.all([p1, p2, p3]) //it says wait first let all promises to execute then you console the values not the pending one
+//   console.log(value)
+//   //for now it will take 4s when all the promise gets fulfilled but if you even put await to all the individual promises then it will take total of 9s sec bcuz it will execute one after another
 
-  //and also if we don't put the await to Promise.all promise then the rest of the code like console.log() will not wait and return the pending promise
+//   //and also if we don't put the await to Promise.all promise then the rest of the code like console.log() will not wait and return the pending promise
 
-  // is like not using .then() and directly consoling the promise 
+//   // is like not using .then() and directly consoling the promise 
+// }
+// overAll()
+
+
+//e.g
+const getAllUsers = async () => {
+  try {
+
+    const res = await fetch('https://api.jikan.moe/v4/seasons/2005/spring?sfw')
+    //fetch will return an promise fulfilled one (either resolved or rejected) with respective value
+    // hence we have to assign await to wait before moving forward (let it produce then consume)
+
+    const data = await res.json() //it also returns an promise, which means it will take time and we need to assign await to it or else the further code will execute directly without any value, like how we used to return a promise inside the .then() and then only further .then() will execute
+
+    console.log(data)
+
+  } catch (error) {
+    console.log(error)
+  }
 }
-overAll()
+
+getAllUsers()
+
+// .json()
+// It returns a promise which resolves with the result of parsing the body text as JSON
+//Note that despite the method being named json(), the result is not JSON but is instead the result of taking JSON as input and parsing it to produce a JavaScript object
 
 
 

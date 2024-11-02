@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API</title>
-</head>
-<body>
-  <script>
-    // ApiRequest and V8 engine
-    const xhr = new XMLHttpRequest();
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+  </head>
+  <body>
+    <script>
+      // ApiRequest and V8 engine
+      const requestUrl = "https://api.jikan.moe/v4/seasons/2005/spring?sfw";
+      const xhr = new XMLHttpRequest();
+      // console.log(xhr)
+      xhr.open("GET", requestUrl);
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        //2
+        //3
+        //4
+
+        if (xhr.readyState === 4) {
+          // console.log(xhr.responseText);
+          console.log(this.responseText);
+          const data = this.responseText
+          console.log(typeof data)
+          //as its an JSON Object it would be in the form of JSON String so we have to convert it from the Json string to JS object
+
+          const res = JSON.parse(data)
+          console.log(JSON.parse(data))
+          console.log(typeof res)
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
 </html>

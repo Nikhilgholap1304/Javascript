@@ -180,27 +180,27 @@
 
 
 ///Example
-new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve("1st step done you moron")
-  }, 2000);
-}).then((value) => {
-  return new Promise((resolve) => {
-    console.log(value)
-    setTimeout(() => {
-      resolve("2nd step done you jerk")
-    }, 2000);
-  })
-}).then((value) => {
-  return new Promise((resolve) => {
-    console.log(value)
-    setTimeout(() => {
-      resolve("3rd step done you bastard")
-    }, 2000);
-  })
-}).then((value) => console.log(value)).finally(() => {
-  console.log("well this is finally and gonna run no matter what")
-})
+// new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("1st step done you moron")
+//   }, 2000);
+// }).then((value) => {
+//   return new Promise((resolve) => {
+//     console.log(value)
+//     setTimeout(() => {
+//       resolve("2nd step done you jerk")
+//     }, 2000);
+//   })
+// }).then((value) => {
+//   return new Promise((resolve) => {
+//     console.log(value)
+//     setTimeout(() => {
+//       resolve("3rd step done you bastard")
+//     }, 2000);
+//   })
+// }).then((value) => console.log(value)).finally(() => {
+//   console.log("well this is finally and gonna run no matter what")
+// })
 
 // 1st step done you moron
 // 2nd step done you jerk
@@ -238,6 +238,24 @@ new Promise((resolve, reject) => {
 
 //As said for finally(handler), it’s a place to do generic cleanup, no matter what the outcome was.
 
+//one more thing I got to know is
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let error = false
+    if (!error) {
+      resolve({ name: 'nikhil', age: 20 })
+    } else {
+      reject("Error")
+    }
+  }, 2000);
+}).then((value)=>{
+  console.log(value)
+  return value.name //did you wonder where this returning value will go
+}).then((userName)=>{
+  console.log(userName) //nikhil (cuz anyway we return something, for most most of the times promise in which the resolved value of promise we get as an parameter to .then()... instead we are returning a value that too can be accessed via succeeding .then())
+}).catch(console.log) // or .catch((err)=>console.log(err))
+
+
 //To summarize:
 
 // A finally handler doesn’t get the outcome of the previous handler (it has no arguments). This outcome is passed through instead, to the next suitable handler.
@@ -251,9 +269,9 @@ new Promise((resolve, reject) => {
 
 // Even when a Promise is immediately resolved, the code on the lines below .then/.catch/.finally will still execute before these handlers.
 
-let promise = Promise.resolve();
-promise.then(() => console.log("promise done!"));
-console.log("code finished"); // this alert shows first
+// let promise = Promise.resolve();
+// promise.then(() => console.log("promise done!"));
+// console.log("code finished"); // this console.log prints first
 //code finished
 //promise done!
 

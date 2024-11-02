@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "One piece",
+      "rating": 9
+    },
+    {
+      "id": 1,
+      "name": "JJK",
+      "rating": 9
+    },
+    {
+      "id": 1,
+      "name": "Naruto",
+      "rating": 9
+    }
+  ]
+}

@@ -32,7 +32,7 @@ fetch('https://api.jikan.moe/v4/seasons/2005/spring?sfw')
   .then((res) => {
     return res
   }).then((data) => {
-    console.log(data)
+    console.log(Object.keys(data))
   }).catch((err) => {
     console.log(err)
   })

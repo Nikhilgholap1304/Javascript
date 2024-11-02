@@ -72,10 +72,50 @@ let err = new Error("Its an error")
 
 // As you can see there's an built-in constructor from which we can create new err object from Error Class
 
-let err1 = new SyntaxError("Its an syntax error")
-let err2 = new AggregateError("Its an Aggregate error")
-let err3 = new TypeError("Its an Type error")
-let err4 = new ReferenceError("Its an Reference error")
+// let err1 = new SyntaxError("Its an syntax error")
+// let err2 = new AggregateError("Its an Aggregate error")
+// let err3 = new TypeError("Its an Type error")
+// let err4 = new ReferenceError("Its an Reference error")
+
+//also you can use the err object properties which are .name and .message which most of the objects will comprise of
+//which are same as how you put message inside while creating constructor
+// try {
+//   noSuchVariable;
+// } catch (err) {
+//   console.log(err.name)
+//   //ReferenceError
+//   console.log(err.message)
+//   //noSuchVariable is not defined
+//   console.log(err.stack)
+//   //ReferenceError: noSuchVariable is not defined
+// }
+
+// console.log(typeof json) //representing json string
+let json = '{"name": "nikhil", "age": 20}'
+
+try {
+  let user = JSON.parse(json)
+  console.log(user) //object
+
+  console.log(user.skill) //undefined
+  //the code will run normally and runtime will not throw an error
+  //eventhough this is an error from our perspective where we couldn't be able to get that
+  //in such cases we will throw error manually using throw keyword
+
+  if(!user.skill){
+    throw new Error("No value"); //whatever constructor you are using is a name and the argument you are passing is the message
+  }
+} catch (error) {
+  console.log(error)
+  //Error: No value
+}
+
+// “Throw” operator
+// The throw operator generates an error.
+// The syntax is:
+// throw <error object>
+
+//For built-in errors (not for any objects, just for errors), the name property is exactly the name of the constructor. And message is taken from the argument.
 
 
 

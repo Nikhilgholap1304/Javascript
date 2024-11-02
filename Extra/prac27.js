@@ -1,5 +1,6 @@
 //fetch Object
 
+// fetch(url, [options]) //without options its an get request but with options its an post request
 //e.g
 // const getAllUsers = async () => {
 //   try {
@@ -28,14 +29,71 @@
 // console.log(fetch)
 //[AsyncFunction: fetch] which returns promise as a response
 
-fetch('https://api.jikan.moe/v4/seasons/2005/spring?sfw')
-.then((res) => {
-    return res.json() //without using .json you won't be able to access the object since its not an JS object
-}).then((data) => {
-    console.log(Object.keys(data))
-}).catch((err) => {
-    console.log(err)
-})
+// fetch('https://api.jikan.moe/v4/seasons/2005/spring?sfw')
+// .then((res) => {
+//     return res.json() //without using .json you won't be able to access the object since its not an JS object
+// }).then((data) => {
+//     console.log(Object.keys(data))
+// }).catch((err) => {
+//     console.log(err)
+// })
+
+//res.headers
+
+// fetch('https://api.jikan.moe/v4/seasons/2005/spring?sfw')
+//     .then((res) => {
+//         console.log(res) //It will give provide us the response object, though you cannot access the data like this
+//         console.log(res.status) //like 200 or 404 or 400 or 500
+//         //200
+//         console.log(res.ok)
+//         //true
+//         console.log(res.headers)
+//         //HeadersList {.....}
+//         return res.json()
+//     }).then((data) => {
+//         console.log(Object.keys(data))
+//         // [ 'pagination', 'data' ]
+//     }).catch((err) => {
+//         console.log(err)
+//     })
+
+// There are 2 types of headers 
+// 1) Response Headers - The Response headers are available in response.headers
+// 2) Request Headers - to set a request header in fetch we can use the headers option
+// let res = fetch(url, headers)
+
+
+
+//Post Request
+
+// fetch('https://jsonplaceholder.typicode.com/posts', options)
+// .then((res)=>res.json())
+// .then((data)=>console.log(data))
+// .catch((err)=>console.log(err))
+
+// or 
+const postUser = async () => {
+    try {
+        let options = {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                //before posting the data you first have to convert it into JSON string for compatibility
+                title: 'Jujutsu Kaisen',
+                userId: 1,
+                body: 'Its the Best'
+            })
+        }
+        const res = await fetch('https://jsonplaceholder.typicode.com/posts', options)
+        const data = await res.json()
+        console.log(data)
+    } catch (error) {
+        console.log(error)
+    }
+}
+postUser()
 
 
 

@@ -242,8 +242,6 @@
 
 // In the example below, there’s a return in try. In this case, finally is executed just before the control returns to the outer code.
 
-
-
 const f1 = () => {
   try {
     return 1
@@ -254,7 +252,13 @@ const f1 = () => {
   }
   console.log("This will not work")
   //so you just found the difference between normal statement and final construct/block
+  //it doesn't matter even if the function returns earlier in try block or returns something in catch block, finally will still run and execute that too before returning something
 }
+console.log(f1())
+//This will execute no matter what
+//1
+
+//he try...finally construct, without catch clause, is also useful. We apply it when we don’t want to handle errors here (let them fall through), but want to be sure that processes that we started are finalized
 
 
 

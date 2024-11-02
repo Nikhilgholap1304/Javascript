@@ -35,6 +35,8 @@ if <condition>{
 
 let and const declarations can also be scoped to the block statement that they are declared in.
 
+//IMP - The keyword const is a little misleading. It does not define a constant value. It defines a constant reference to a value
+
 Javascript is single threaded and an synchronous language
 single threaded - one command is processed at a time.
 synchronous - line by line
@@ -109,5 +111,13 @@ as you are already well aware of this Blocking represents synchronous activity a
 
 API is nothing but the talking language between two systems 
 be it frontend - backend or javascript - Python
+
+
+Special Operator - 
+1) typeof //returns datatype
+2) delete //deletes the value
+3) throw //throws error
+4) instanceof //returns bool
+5) new //new operator lets developers create an instance of a user-defined object type or of one of the built-in object types that has a constructor function
 
 

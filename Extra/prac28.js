@@ -1,3 +1,5 @@
+"use strict";
+
 // setTimeout(() => {
 //   console.log("run")
 // }, 1000);
@@ -67,7 +69,7 @@
 //   }
 // }, 1000);
 
-let err = new Error("Its an error")
+// let err = new Error("Its an error")
 // console.log(err)
 
 // As you can see there's an built-in constructor from which we can create new err object from Error Class
@@ -91,24 +93,25 @@ let err = new Error("Its an error")
 // }
 
 // console.log(typeof json) //representing json string
-let json = '{"name": "nikhil", "age": 20}'
 
-try {
-  let user = JSON.parse(json)
-  console.log(user) //object
+// let json = '{"name": "nikhil", "age": 20}'
 
-  console.log(user.skill) //undefined
-  //the code will run normally and runtime will not throw an error
-  //eventhough this is an error from our perspective where we couldn't be able to get that
-  //in such cases we will throw error manually using throw keyword
+// try {
+//   let user = JSON.parse(json)
+//   console.log(user) //object
 
-  if(!user.skill){
-    throw new Error("No value"); //whatever constructor you are using is a name and the argument you are passing is the message
-  }
-} catch (error) {
-  console.log(error)
-  //Error: No value
-}
+//   console.log(user.skill) //undefined
+//   //the code will run normally and runtime will not throw an error
+//   //eventhough this is an error from our perspective where we couldn't be able to get that
+//   //in such cases we will throw error manually using throw keyword
+
+//   if(!user.skill){
+//     throw new Error("No value"); //whatever constructor you are using is a name and the argument you are passing is the message
+//   }
+// } catch (error) {
+//   console.log(error)
+//   //Error: No value
+// }
 
 // “Throw” operator
 // The throw operator generates an error.
@@ -144,5 +147,114 @@ try {
 // Catch should only process errors that it knows and “rethrow” all others./////////////////////////////
 
 // Usually, we can check the error type using the instanceof operator:
+
+//e.g
+
+// I have used "use strict" for this
+// try{
+//   user = {name: "Nikhil"} //not used let,var or const
+// }catch(err){
+//   // if(err.name === "ReferenceError"){
+//   //   console.log('ReferenceError')
+//   // } //is same as
+//   if(err instanceof ReferenceError){
+//     console.log("Reference Error")
+//     //Reference Error
+//   }
+// }
+
+// well surprisingly, it can be used anywhere to check if a certain obj is an instance of the class or not
+// let a = Promise.resolve();
+// console.log(a instanceof Promise)
+// //true 
+// console.log(a instanceof Error)
+// //false
+
+
+//This is truly an rethrowing
+
+// try {
+//   user = { name: "Nikhil" } //not used let,var or const 
+//   // let a = 0/2; //this line will not execute cuz the control will be exited and will continue form catch
+//   // console.log(a)
+// } catch (err) {
+//   if (err instanceof TypeError) {
+//     console.log("Type Error")
+//   } else {
+//     throw err
+//   }
+// }
+
+//As you can see above we only handle the error what we know or expect however the the errors which we can't handle we be rethrown.. may be to a outer try..catch block like following
+
+
+// try {
+//   try {
+//     user = { name: "Nikhil" }
+//   } catch (err) {
+//     if (err instanceof TypeError) {
+//       console.log("Type Error")
+//     } else {
+//       throw err
+//     }
+//   }
+// } catch (error) {
+//   console.log("External Error: ", error)
+//   //External Error:  ReferenceError: user is not defined
+// }
+
+
+//Time to talk about finally
+
+// try…catch…finally
+// Wait, that’s not all.
+
+// The try...catch construct may have one more code clause: finally.
+
+// If it exists, it runs in all cases:
+
+// after try, if there were no errors,
+// after catch, if there were errors.
+
+
+// The finally clause is often used when we start doing something and want to finalize it in any case of outcome.
+
+// For instance, we want to measure the time that a Fibonacci numbers function fib(n) takes. Naturally, we can start measuring before it runs and finish afterwards. But what if there’s an error during the function call? In particular, the implementation of fib(n) in the code below returns an error for negative or non-integer numbers.
+
+// The finally clause is a great place to finish the measurements no matter what.
+
+// Here finally guarantees that the time will be measured correctly in both situations – in case of a successful execution of fib and in case of an error in it:
+
+
+// let start = Date.now();
+
+// try {
+//   result = fib(num);
+// } catch (err) {
+//   result = 0;
+// } finally {
+//   diff = Date.now() - start;
+// this will count the number of time taken to execute the code
+// }
+
+
+// The finally clause works for any exit from try...catch. That includes an explicit return.
+
+// In the example below, there’s a return in try. In this case, finally is executed just before the control returns to the outer code.
+
+
+
+const f1 = () => {
+  try {
+    return 1
+  } catch (err) {
+    console.log(err)
+  } finally {
+    console.log("This will execute no matter what")
+  }
+  console.log("This will not work")
+  //so you just found the difference between normal statement and final construct/block
+}
+
 
 

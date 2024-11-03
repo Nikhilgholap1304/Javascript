@@ -28,7 +28,7 @@
 function createUser(username, score){
   this.username = username
   this.score = score
-  return this
+  // return this
 }
 
 createUser.prototype.increment = function(){
@@ -48,16 +48,21 @@ const yami = new createUser("yami", 30)
 // console.log(gojo.prototype.printMe())
 //error
 
-console.log(gojo.printMe())
+//literally what "new" does is; it creates the whole 
+
+gojo.printMe()
+//gojo
 console.log(yami)
 // createUser { username: 'gojo', score: 20 }
 // createUser { username: 'yami', score: 30 }
+
+
 
 //if you don't use "new" then "this" keyword will refer to an global object which has rest of the common details, not the specific one and will override the previous values 
 
 // gojo.printMe()
 //TypeError: gojo.printMe is not a function
-//if we try to access the prototypes method without using "new" keyword
+//if we try to access the prototype method without using "new" keyword
 //but 
 
 // createUser.prototype.printMe = function(){
@@ -89,3 +94,22 @@ The constructor is called: The constructor function is called with the specified
 The new object is returned: After the constructor function has been called, if it doesn't return a non-primitive value (object, array, function, etc.), the newly created object is returned.
 
 */  
+
+
+
+// Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. The chain ends when we reach a prototype that has null for its own prototype.
+
+//The property of an object that points to its prototype is called prototype
+
+// When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case undefined is returned
+
+// This is an object called Object.prototype, and it is the most basic prototype, that all objects have by default. The prototype of Object.prototype is null, so it's at the end of the prototype chain
+
+//actually whatever new property or method we are creating or assigning to the function/class via prototype is then gets added inside the prototype object as a property or method which is again inside of constructor function/object 
+
+//but theres no need to mention constructor object as it implicitely happens
+
+// function f2(){}
+
+// const fObj = new f2()
+// now the [[prototype]] object gets created for fObj and can be able to inherit all the functions properties which was inside the org functions constructor object/function

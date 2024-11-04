@@ -11,6 +11,7 @@
 // surprise, we can also treat function as an object
 // what inheritance does is we can use all the behaviour of functions as well as we can use the member/methods/functionalities of objects as well cuz the prototype of function is also an object
 
+
 // demo.name = "nikhil"
 // console.log(demo(1))
 // //1

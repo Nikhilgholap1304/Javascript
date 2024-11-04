@@ -14,13 +14,14 @@ let heroPower = {
 }
 
 
-// console.log(heroPower.nikhil)
+
+//console.log(heroPower.nikhil)
 //undefined
 
-// as every things like array, functions, etc are made on of Object, which means every other datatype inherits from the Objrct
+// as every things like array, functions, etc are made on of Object, which means every other datatype inherits from the Object
 //just we don't have to mention the prototype chain like .protopye.prototype.prototype till end
 //instead we can directly use inherited methods/properties
-//so if we change grand Object class/method only, then it will also take effect on obj we have created since its an ultimate parent from where we can get methods and prototypes
+//so if we change grand Object class/method only, then it will also take effect on obj we have created it since its an ultimate parent from where we can get methods and prototypes
 
 Object.prototype.nikhil = function(){
   console.log("Nikhil is present in all object")

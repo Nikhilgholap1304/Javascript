@@ -48,6 +48,7 @@
 
 
 class User {
+  static dbName = "User"
     constructor(username) {
       this.username = username;
     }
@@ -78,6 +79,11 @@ const nikhil = new Otaku('nikhil', 'nikhil@gmail,com', 12345)
 nikhil.addAnime()
 console.log(nikhil.changeUserName())
 
+// console.log(nikhil.dbName())
+//error
+// console.log(User.dbName)
+//User
+
 console.log(gojo === nikhil)
 //false
 
@@ -100,6 +106,19 @@ console.log(Otaku.createId())
 // which means it can also be called with the class which inherits but not with instances or objects
 
 
+// Classes provide "super" keyword for that.
 
+// super.method(...) to call a parent method.
+// super(...) to call a parent constructor (inside our constructor only).
 
+// class Rabbit extends Animal {
+//   hide() {
+//     alert(`${this.name} hides!`);
+//   }
+
+//   stop() {
+//     super.stop(); // call parent stop
+//     this.hide(); // and then hide
+//   }
+// }
 

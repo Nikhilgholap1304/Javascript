@@ -92,7 +92,22 @@ console.log(naruto)
 //createUser { username: 'naruto', score: 40 }
 //surprise - That’s handy when we have an object, don’t know which constructor was used for it (e.g. it comes from a 3rd party library), and we need to create another one of the same kind
 
+console.log(naruto.__proto__)
+//{ increment: [Function (anonymous)], printMe: [Function (anonymous)] }
+//first it will refer to parent object
 
+console.log(naruto.__proto__.__proto__)
+// [Object: null prototype] {}
+//now its refering to ultimate parent object which does have the null in its prototype property
+
+console.log(naruto.__proto__ === gojo.__proto__)
+// true
+console.log(naruto.__proto__ === createUser)
+//false
+console.log(naruto.__proto__ === createUser.prototype)
+//true
+console.log(naruto.__proto__.__proto__ === Object.prototype)
+//true
 
 
 /*

@@ -23,7 +23,7 @@ let arr = () => {
 
 //apply();
 
-//fn.apply(obj, [10,20]);
+fn.apply(obj, [10,20]);
 
 //!bind();
 

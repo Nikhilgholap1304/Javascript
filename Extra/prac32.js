@@ -9,6 +9,7 @@ function setUserName(username){
 //   this.email = email
 //   this.password = password
 // }
+// createUser { email: 'gojo@edu.in', password: '123' }
 // if you don't use the call method then the execution context of the setUserName functions scope will get created and will also get closed once it executes so it will not affect to createUser,..............
 //And also the "this" of setUserName will refer to itself not the createUsers this, for that we use call method to bind "this" keyword with any other function/object rather than itself
 
@@ -21,5 +22,5 @@ function createUser(username, email, password){
 
 const gojo = new createUser("gojo", "gojo@edu.in", "123")
 console.log(gojo)
-
-console.log(gojo)
+// createUser { username: 'gojo', email: 'gojo@edu.in', password: '123' }
+ 

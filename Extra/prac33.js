@@ -1,0 +1,90 @@
+// Classes and constructor
+
+// class User {
+//   constructor(username, email, password) {
+//     this.username = username;
+//     this.email = email
+//     this.password = password
+//   }
+//   encryptPassword() {
+//     return `${this.password}abc`
+//   }
+//   changeUserName() {
+//     return `${this.username.toUpperCase()}`
+//   }
+// }
+
+// const gojo = new User('gojo', 'gojo@gmail.com', 12345)
+// console.log(gojo)
+// console.log(gojo.encryptPassword())
+// console.log(gojo.changeUserName())
+
+
+// behind the scene
+
+// function User(username, email, password) {
+//   this.username = username;
+//   this.email = email
+//   this.password = password
+// }
+
+// User.encryptPassword = function(){
+//   return `${this.password}abc`
+// } //childs cannot access
+
+// console.log(User.encryptPassword())
+
+// User.prototype.encryptPassword = function(){
+//   return `${this.password}abc`
+// }
+// User.prototype.changeUserName = function(){
+//   return `${this.username.toUpperCase()}`
+// }
+
+// const gojo = new User('gojo', 'gojo@gmail.com', 12345)
+// console.log(gojo) 
+// console.log(gojo.encryptPassword())
+// console.log(gojo.changeUserName())
+
+
+class User {
+    constructor(username) {
+      this.username = username;
+    }
+    changeUserName() {
+      return `${this.username.toUpperCase()}`
+    }
+  }
+
+class Otaku extends User {
+  constructor(username, email, password){
+    super(username)
+    this.email = email;
+    this.password = password;
+  }
+  addAnime(){
+    console.log(`new course has been added by ${this.username}`)
+  }
+}
+  
+const gojo = new User('gojo', 'gojo@gmail.com', 12345)
+// console.log(gojo)
+// console.log(gojo.changeUserName())
+
+const nikhil = new Otaku('nikhil', 'nikhil@gmail,com', 12345)
+nikhil.addAnime()
+console.log(nikhil.changeUserName())
+
+console.log(gojo === nikhil)
+//false
+
+console.log(gojo === User)
+//false
+console.log(nikhil instanceof Otaku)
+//true
+console.log(nikhil instanceof User)
+//true
+
+
+
+

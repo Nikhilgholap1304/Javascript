@@ -1,4 +1,4 @@
-// OOPS & Classes
+// OOPS
 
 // Object is nothing but the collection of properties and methods
 

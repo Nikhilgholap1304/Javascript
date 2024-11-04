@@ -54,6 +54,9 @@ class User {
     changeUserName() {
       return `${this.username.toUpperCase()}`
     }
+    static createId(){
+      return `Id created`
+    }
   }
 
 class Otaku extends User {
@@ -84,6 +87,18 @@ console.log(nikhil instanceof Otaku)
 //true
 console.log(nikhil instanceof User)
 //true
+
+
+console.log(User.createId())
+// Id created
+
+// console.log(jogo.createId())
+// Reference Error
+
+console.log(Otaku.createId())
+//Id created
+// which means it can also be called with the class which inherits but not with instances or objects
+
 
 
 

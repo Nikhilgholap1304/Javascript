@@ -51,9 +51,9 @@ const yami = new createUser("yami", 30)
 
 //literally what "new" does is; it creates the whole 
 
-gojo.printMe()
+// gojo.printMe()
 //gojo
-console.log(yami)
+// console.log(yami)
 // createUser { username: 'gojo', score: 20 }
 // createUser { username: 'yami', score: 30 }
 
@@ -79,6 +79,19 @@ console.log(yami)
 //JavaScript had prototypal inheritance from the beginning. It was one of the core features of the language
 
 // Please note that createUser.prototype here means a regular property named "prototype" on createUser. It sounds something similar to the term “prototype”, but here we really mean a regular property with this name
+
+console.log(createUser.prototype.constructor === createUser)
+//The default "prototype" is an object with the only property constructor that points back to the function itself
+//true
+console.log(gojo.constructor === createUser)
+//true
+
+//We can use constructor property to create a new object using the same constructor as the existing one
+const naruto = new gojo.constructor('naruto', 40)
+console.log(naruto)
+//createUser { username: 'naruto', score: 40 }
+//surprise - That’s handy when we have an object, don’t know which constructor was used for it (e.g. it comes from a 3rd party library), and we need to create another one of the same kind
+
 
 
 

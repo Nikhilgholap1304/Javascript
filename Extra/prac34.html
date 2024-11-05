@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bind</title>
+</head>
+<body>
+  <button>Click Me</button>
+  <script>
+    class React{
+      constructor(){
+        this.library = "React"
+        this.server = "http://localhost:300"
+
+        //requirement
+        document
+        .querySelector('button')
+        .addEventListener('click',this.handleClick.bind(this))
+
+        // before using bind method
+        // clicked me
+        // undefined
+        // bcuz the "this you are using is inside the selected element object, hence the this inside the named function will refer to the library property of button object which is obviously not present and will return undefined"
+        // bind will bind/attach the this of current object and will return that function... rember that returned function need to be called unlike call and apply
+        
+      }
+      handleClick(){
+        console.log("Clicked me")
+        console.log(this.library)
+      }
+    }
+
+    const app = new React()
+  </script>
+</body>
+</html>

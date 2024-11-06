@@ -23,6 +23,7 @@ form.addEventListener('submit', (e) => {
   ob.percentage = percentage.value
   ob.phoneno = phoneno.value
   ob.dob = dob.value
+  console.log(male.name)
   if (male.checked) {
     ob.male = male.value
   } else if (female.checked) {

@@ -44,6 +44,9 @@ const b = document.querySelector("#btn")
 //   console.log("form submit")
 // })
 
+// ...................................................................IMP
+// window.location.href = "./home" // for redirecting from one page to another page
+// ...................................................................IMP
 
 // Mouse events:
 
@@ -184,6 +187,8 @@ if (!enter) {
 // Event: error
 // object.onerror = () => {
 // }
+
+
 
 
 

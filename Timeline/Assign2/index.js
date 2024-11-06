@@ -8,6 +8,7 @@ const submit = document.querySelector('#submit')
 const form = document.querySelector('form')
 const male = document.querySelector('#male')
 const female = document.querySelector('#female')
+const data = document.querySelector('#data')
 
 let ob = {}
 
@@ -27,7 +28,7 @@ form.addEventListener('submit', (e) => {
   } else if (female.checked) {
     ob.female = female.value
   }
-  
+  data.innerHTML = JSON.stringify(ob)
 })
 
 console.log(ob)

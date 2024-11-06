@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+  </head>
+  <style>
+    body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+  <body>
+    <form>
+      <label for="">
+        <h4>username</h4>
+        <input type="text" name="username" id="username" />
+      </label>
+      <label for="">
+        <h4>password</h4>
+        <input type="password" name="password" id="password" />
+      </label>
+      <label for="">
+        <h4>email</h4>
+        <input type="email" name="email" id="email" />
+      </label>
+      <label for="">
+        <h4>percentage</h4>
+        <input type="number" name="percentage" id="percentage" />
+      </label>
+      <label for="">
+        <h4>phoneno</h4>
+        <input
+          type="number"
+          name="phoneno"
+          id="phoneno"
+        />
+      </label>
+      <label for="">
+        <h4>dob</h4>
+        <input
+          type="date"
+          name="dob"
+          id="dob"
+        />
+      </label>
+      <label for="">
+        <h4>gender</h4>
+        <input
+          type="radio"
+          name="gender"
+          value="male"
+          id="male"
+        />
+        male
+        <input
+          type="radio"
+          name="gender"
+          value="female"
+          id="female"
+        />
+        female
+      </label>
+      <br>
+      <br>
+      <br>
+      <input type="submit" value="Submit" id="submit">
+    </form>
+    <div id="data"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>

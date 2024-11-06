@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 1</title>
+</head>
+<style>
+  body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .box{
+    width: 10rem;
+    height: 10rem;
+    background: #333;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+  .btn{
+    font-size: 1.2rem;
+    font-weight: 200;
+    background-color: rgb(255, 178, 35);
+    padding: 0.5rem 1rem;
+    border: 0.1rem solid rgba(0,0,0,0.1);
+    border-radius: 0.2rem;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+    transition: all 0.2s;
+  }
+  .btn:hover{
+    background-color: orange;
+  }
+  .box.active{
+    visibility: visible;
+    opacity: 1;
+  }
+
+</style>
+<body>
+  <div class="box active"></div>
+  <button class="btn">hide</button>
+  <script src="./index.js"></script>
+</body>
+</html>

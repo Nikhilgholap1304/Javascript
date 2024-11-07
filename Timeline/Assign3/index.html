@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ass3</title>
+  </head>
+  <body>
+    <form action="">
+      <h1>Anime</h1>
+      <input type="checkbox" name="anime" id="onepiece" value="onepiece" /> One
+      Piece <br />
+      <input
+        type="checkbox"
+        name="anime"
+        id="jujutsukaisen"
+        value="jujutsukaisen"
+      />
+      Jujutsu Kaisen
+      <br />
+      <input type="checkbox" name="anime" id="naruto" value="naruto" /> Naruto
+      <br />
+      <input type="checkbox" name="anime" id="aot" value="aot" /> AOT <br />
+      <input type="checkbox" name="anime" id="deathnote" value="deathnote" />
+      Deathnote <br /><br /><br />
+      <button type="submit">Submit</button>
+    </form>
+    <br /><br />
+    <div class="output">
+      <h3>Output</h3>
+      <div class="show">Empty</div>
+    </div>
+  </body>
+  <script>
+    let form = document.querySelector("form");
+    let anime = document.getElementsByName("anime");
+    let animeRes = [];
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      anime.forEach((ele, i) => {
+        if (!animeRes.includes(ele.value) && ele.checked) {
+          animeRes.push(ele.value);
+        } else if (animeRes.includes(ele.value) && !ele.checked) {
+          console.log("working");
+          animeRes.splice(i);
+        }
+      });
+      animeRes = Array.from(new Set(animeRes));
+      console.log(animeRes);
+      document.querySelector(".show").innerHTML = JSON.stringify(animeRes);
+    });
+  </script>
+</html>

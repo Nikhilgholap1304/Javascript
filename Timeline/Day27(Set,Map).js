@@ -15,8 +15,9 @@ var s = new Set([
   [10, 20],
   10,
   { name: "abc" },
-  arr,
+  // arr,
 ]);
+// console.log(s.values())
 
 //! how can we add values into set:
 
